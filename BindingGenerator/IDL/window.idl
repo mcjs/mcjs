@@ -1,0 +1,185 @@
+interface Console {
+  [Runtime] void log(DOMString message);
+  [Private] void log(DOMString message);
+  [Runtime] void debug(DOMString message);
+  [Private] void debug(DOMString message);
+  [Runtime] void info(DOMString message);
+  [Private] void info(DOMString message);
+  [Runtime] void warn(DOMString message);
+  [Private] void warn(DOMString message);
+  [Runtime] void error(DOMString message);
+  [Private] void error(DOMString message);
+           void clear();
+           void terminate();
+};
+
+interface ContentWindow : EventTarget {
+  readonly attribute ContentWindow    parent;
+  readonly attribute Document         document;
+  readonly attribute boolean          closed;
+           attribute DOMString        defaultStatus;
+  readonly attribute ContentWindowList         frames;           //Is this the right type?
+  readonly attribute History          history;
+  readonly attribute unsigned long    length;
+           attribute Location         location;
+           attribute DOMString        name;
+  readonly attribute Navigator        navigator;
+  readonly attribute ContentWindow    opener;
+  readonly attribute unsigned long    pageXOffset;
+  readonly attribute unsigned long    pageYOffset;
+  readonly attribute Screen           screen;
+  readonly attribute unsigned long    screenLeft;
+  readonly attribute unsigned long    screenTop;
+  readonly attribute unsigned long    screenX;
+  readonly attribute unsigned long    screenY;
+  readonly attribute ContentWindow    self;
+           attribute DOMString        status;
+  readonly attribute ContentWindow    top;
+  readonly attribute Console          console;
+
+  void                alert(DOMString message);
+  void                blur();
+  [Runtime] unsigned long clearInterval(unsigned long id);
+  [Runtime] unsigned long clearTimeout(unsigned long id);
+  void                close();
+  boolean             confirm(DOMString message);
+  void                focus();
+  CSSStyleDeclaration getComputedStyle(Element elt, 
+                                                 DOMString pseudoElt);
+  void                moveBy(unsigned long x,
+                                       unsigned long y);
+  void                moveTo(unsigned long x,
+                                       unsigned long y);
+  void                open(DOMString URL,
+                                     DOMString name,
+                                     DOMString specs,
+                                     boolean replace);
+  void                print();
+  DOMString           prompt(DOMString msg,
+                                       DOMString defaultText);
+  void                resizeBy(unsigned long width,
+                                         unsigned long height);
+  [Unimplemented] void resizeTo(unsigned long width,
+                                         unsigned long height);
+  void                scrollBy(unsigned long xnum,
+                                         unsigned long ynum);
+  void                scrollTo(unsigned long xnum,
+                                         unsigned long ynum);
+  [Runtime]
+  unsigned long                 setInterval(DOMString code,
+                                            unsigned long milisec);
+  [Runtime]
+  unsigned long                 setTimeout(DOMString code,
+                                           unsigned long milisec);
+  // The Image Object                               
+  [Runtime]
+  HTMLImageElement              Image(unsigned long width,
+                                      unsigned long height);
+
+  // event handler IDL attributes
+  // [TreatNonCallableasNull]
+  [EventHandler] attribute Function? onabort;
+  [EventHandler] attribute Function? onblur;
+  [EventHandler] attribute Function? oncanplay;
+  [EventHandler] attribute Function? oncanplaythrough;
+  [EventHandler] attribute Function? onchange;
+  [EventHandler] attribute Function? onclick;
+  [EventHandler] attribute Function? oncontextmenu;
+  [EventHandler] attribute Function? oncuechange;
+  [EventHandler] attribute Function? ondblclick;
+  [EventHandler] attribute Function? ondrag;
+  [EventHandler] attribute Function? ondragend;
+  [EventHandler] attribute Function? ondragenter;
+  [EventHandler] attribute Function? ondragleave;
+  [EventHandler] attribute Function? ondragover;
+  [EventHandler] attribute Function? ondragstart;
+  [EventHandler] attribute Function? ondrop;
+  [EventHandler] attribute Function? ondurationchange;
+  [EventHandler] attribute Function? onemptied;
+  [EventHandler] attribute Function? onended;
+  [EventHandler] attribute Function? onerror;
+  [EventHandler] attribute Function? onfocus;
+  [EventHandler] attribute Function? oninput;
+  [EventHandler] attribute Function? oninvalid;
+  [EventHandler] attribute Function? onkeydown;
+  [EventHandler] attribute Function? onkeypress;
+  [EventHandler] attribute Function? onkeyup;
+  [EventHandler] attribute Function? onload;
+  [EventHandler] attribute Function? onloadeddata;
+  [EventHandler] attribute Function? onloadedmetadata;
+  [EventHandler] attribute Function? onloadstart;
+  [EventHandler] attribute Function? onmousedown;
+  [EventHandler] attribute Function? onmousemove;
+  [EventHandler] attribute Function? onmouseout;
+  [EventHandler] attribute Function? onmouseover;
+  [EventHandler] attribute Function? onmouseup;
+  [EventHandler] attribute Function? onmousewheel;
+  [EventHandler] attribute Function? onpause;
+  [EventHandler] attribute Function? onplay;
+  [EventHandler] attribute Function? onplaying;
+  [EventHandler] attribute Function? onprogress;
+  [EventHandler] attribute Function? onratechange;
+  [EventHandler] attribute Function? onreset;
+  [EventHandler] attribute Function? onresize;
+  [EventHandler] attribute Function? onscroll;
+  [EventHandler] attribute Function? onseeked;
+  [EventHandler] attribute Function? onseeking;
+  [EventHandler] attribute Function? onselect;
+  [EventHandler] attribute Function? onshow;
+  [EventHandler] attribute Function? onstalled;
+  [EventHandler] attribute Function? onsubmit;
+  [EventHandler] attribute Function? onsuspend;
+  [EventHandler] attribute Function? ontimeupdate;
+  [EventHandler] attribute Function? onvolumechange;
+  [EventHandler] attribute Function? onwaiting;
+};
+
+[List] interface ContentWindowList {
+  ContentWindow      item(unsigned long index);
+  readonly attribute unsigned long    length;
+};
+
+interface History {
+  [Unimplemented] readonly attribute unsigned long     length;
+
+  [Unimplemented] void               back();
+  [Unimplemented] void               forward();
+  [Unimplemented] void               go(DOMString URL);
+};
+
+interface Location {
+  [Unimplemented=Setting] attribute DOMString    hash;
+  [Unimplemented=Setting] attribute DOMString    host;
+  [Unimplemented=Setting] attribute DOMString    hostname;
+                         attribute DOMString      href;
+  [Unimplemented=Setting] attribute DOMString    pathname;
+  [Unimplemented=Setting] attribute DOMString    port;
+  [Unimplemented=Setting] attribute DOMString    protocol;
+  [Unimplemented=Setting] attribute DOMString    search;
+
+                 void assign(DOMString URL);
+  [Unimplemented] void reload() ;
+  [Unimplemented] void replace(DOMString URL);
+};
+
+interface Navigator {
+  readonly attribute DOMString    appCodeName;
+  readonly attribute DOMString    appName;
+  readonly attribute DOMString    appVersion;
+  readonly attribute boolean      cookieEnabled;
+  readonly attribute DOMString    platform;
+  readonly attribute DOMString    userAgent;
+//  [Runtime] readonly attribute Geolocation  geolocation;
+
+  boolean            javaEnabled();
+  boolean            taintEnabled();
+};
+
+interface Screen {
+  readonly attribute unsigned long    availHeight;
+  readonly attribute unsigned long    availWidth;
+  readonly attribute unsigned long    colorDepth;
+  readonly attribute unsigned long    height;
+  readonly attribute unsigned long    pixelDepth;
+  readonly attribute unsigned long    width;
+};

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{528541E4-707F-4B38-9447-ECF7FA902BAC}</ProjectGuid>
+    <Compiler>
+      <Compiler ctype="GppCompiler" />
+    </Compiler>
+    <Language>CPP</Language>
+    <Target>Bin</Target>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <OutputName>MCJSInvoker</OutputName>
+    <CompileTarget>Bin</CompileTarget>
+    <ExtraCompilerArguments>-D_REENTRANT -I/home/salamat/Programs/mono/lib/pkgconfig/../../include/mono-2.0
+</ExtraCompilerArguments>
+    <ExtraLinkerArguments>-L/home/salamat/Programs/mono/lib/pkgconfig/../../lib -lmono-2.0 -lm -lrt -ldl -lpthread
+</ExtraLinkerArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <DefineSymbols>MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <OptimizationLevel>3</OptimizationLevel>
+    <OutputName>MCJSInvoker</OutputName>
+    <CompileTarget>Bin</CompileTarget>
+    <WarningLevel>All</WarningLevel>
+    <ExtraCompilerArguments>-D_REENTRANT -I/home/salamat/Programs/mono/lib/pkgconfig/../../include/mono-2.0  </ExtraCompilerArguments>
+    <ExtraLinkerArguments>-L/home/salamat/Programs/mono/lib/pkgconfig/../../lib -lmono-2.0 -lm -lrt -ldl -lpthread  </ExtraLinkerArguments>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.cpp" />
+    <Compile Include="DOMObject.cpp" />
+    <Compile Include="JSRuntimeWrapper.cpp" />
+    <Compile Include="DOMBase.cpp" />
+    <Compile Include="MonoInstance.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DOMObject.h" />
+    <None Include="JSRuntimeWrapper.h" />
+    <None Include="DOMBase.h" />
+    <None Include="MonoInstance.h" />
+  </ItemGroup>
+</Project>

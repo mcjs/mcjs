@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7860192-A3FF-4470-A361-942D6D6D397D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mjr</RootNamespace>
+    <AssemblyName>MCJavascriptRuntime</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DIAGNOSE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builtins\TypedArray\DArrayBuffer.cs" />
+    <Compile Include="Builtins\TypedArray\DFloat32Array.cs" />
+    <Compile Include="Builtins\TypedArray\DFloat64Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSArrayBuffer.cs" />
+    <Compile Include="Builtins\JSError.cs" />
+    <Compile Include="Builtins\JSFunction.cs" />
+    <Compile Include="Builtins\JSGlobalObject.cs" />
+    <Compile Include="Builtins\TypedArray\DInt16Array.cs" />
+    <Compile Include="Builtins\TypedArray\DInt32Array.cs" />
+    <Compile Include="Builtins\TypedArray\DInt8Array.cs" />
+    <Compile Include="Builtins\TypedArray\DTypedArray.cs" />
+    <Compile Include="Builtins\TypedArray\DUint16Array.cs" />
+    <Compile Include="Builtins\TypedArray\DUint32Array.cs" />
+    <Compile Include="Builtins\TypedArray\DUint8Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSFloat32Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSFloat64Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSInt16Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSInt32Array.cs" />
+    <Compile Include="Builtins\JSRegExp.cs" />
+    <Compile Include="Builtins\TypedArray\JSInt8Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSTypedArrayBase.cs" />
+    <Compile Include="Builtins\TypedArray\JSUint16Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSUint32Array.cs" />
+    <Compile Include="Builtins\TypedArray\JSUint8Array.cs" />
+    <Compile Include="CodeGen\Algorithm.cs" />
+    <Compile Include="CodeGen\Analyzer.cs" />
+    <Compile Include="CodeGen\CodeGeneratorWithInlineCache.cs" />
+    <Compile Include="CodeGen\CodeGeneratorWithSpecialization.cs" />
+    <Compile Include="CodeGen\CodeGeneratorWithProfiling.cs" />
+    <Compile Include="CodeGen\FunctionInliner.cs" />
+    <Compile Include="CodeGen\IRCloner.cs" />
+    <Compile Include="CodeGen\Profiler.cs" />
+    <Compile Include="CodeGen\CodeGenerationInfo.cs" />
+    <Compile Include="CodeGen\CodeGenerator.cs" />
+    <Compile Include="CodeGen\CodeGeneratorBase.cs" />
+    <Compile Include="CodeGen\CodeGeneratorLight.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeGen\FunctionDeclarationHoister.cs" />
+    <Compile Include="CodeGen\ImplicitReturnInserter.cs" />
+    <Compile Include="CodeGen\Interpreter.cs" />
+    <Compile Include="CodeGen\LabelInfoManager.cs" />
+    <Compile Include="CodeGen\LocalVarManager.cs" />
+    <Compile Include="CodeGen\MethodResolver.cs" />
+    <Compile Include="CodeGen\TypeCalculator.cs" />
+    <Compile Include="CodeGen\TypeInferer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeGen\Types.cs" />
+    <Compile Include="CodeGen\ValueTypePairs.cs" />
+    <Compile Include="DepthFirstVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILGen\ValidatingILGenerator.cs" />
+    <Compile Include="IRGraphWriter.cs" />
+    <Compile Include="IRValidator.cs" />
+    <Compile Include="IRXMLSerializer.cs" />
+    <Compile Include="IR\AdditionExpression.cs" />
+    <Compile Include="IR\AssignmentOperator.cs" />
+    <Compile Include="IR\ArrayLiteral.cs" />
+    <Compile Include="IR\ConversionExpression.cs" />
+    <Compile Include="IR\GuardedCast.cs" />
+    <Compile Include="IR\IClassHierarchyVisitor.cs" />
+    <Compile Include="IR\Identifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IR\Indexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IR\InlinedInvocation.cs" />
+    <Compile Include="IR\InternalCall.cs" />
+    <Compile Include="IR\InternalExpression.cs" />
+    <Compile Include="IR\InternalInvocation.cs" />
+    <Compile Include="IR\InternalNew.cs" />
+    <Compile Include="IR\LogicalAndExpression.cs" />
+    <Compile Include="IR\BinaryExpression.cs" />
+    <Compile Include="IR\BitwiseAndExpression.cs" />
+    <Compile Include="IR\BitwiseNotExpression.cs" />
+    <Compile Include="IR\BitwiseOrExpression.cs" />
+    <Compile Include="IR\BitwiseXorExpression.cs" />
+    <Compile Include="IR\BlockStatement.cs" />
+    <Compile Include="IR\BooleanLiteral.cs" />
+    <Compile Include="IR\BreakStatement.cs" />
+    <Compile Include="IR\CaseClause.cs" />
+    <Compile Include="IR\CatchClause.cs" />
+    <Compile Include="IR\CommaOperatorExpression.cs" />
+    <Compile Include="IR\ContinueStatement.cs" />
+    <Compile Include="IR\DeleteExpression.cs" />
+    <Compile Include="IR\DivideExpression.cs" />
+    <Compile Include="IR\DoubleLiteral.cs" />
+    <Compile Include="IR\DoWhileStatement.cs" />
+    <Compile Include="IR\EmptyStatement.cs" />
+    <Compile Include="IR\EqualExpression.cs" />
+    <Compile Include="IR\Expression.cs" />
+    <Compile Include="IR\ExpressionStatement.cs" />
+    <Compile Include="IR\FinallyClause.cs" />
+    <Compile Include="IR\ForEachInStatement.cs" />
+    <Compile Include="IR\ForStatement.cs" />
+    <Compile Include="IR\FunctionDeclarationStatement.cs" />
+    <Compile Include="IR\FunctionExpression.cs" />
+    <Compile Include="IR\GotoStatement.cs" />
+    <Compile Include="IR\GreaterExpression.cs" />
+    <Compile Include="IR\GreaterOrEqualExpression.cs" />
+    <Compile Include="IR\InExpression.cs" />
+    <Compile Include="IR\INodeVisitor.cs" />
+    <Compile Include="IR\IfStatement.cs" />
+    <Compile Include="IR\InstanceOfExpression.cs" />
+    <Compile Include="IR\IntLiteral.cs" />
+    <Compile Include="IR\Invocation.cs" />
+    <Compile Include="IR\LabelStatement.cs" />
+    <Compile Include="IR\LeftShiftExpression.cs" />
+    <Compile Include="IR\LesserExpression.cs" />
+    <Compile Include="IR\LesserOrEqualExpression.cs" />
+    <Compile Include="IR\Literal.cs" />
+    <Compile Include="IR\LogicalNotExpression.cs" />
+    <Compile Include="IR\LoopStatement.cs" />
+    <Compile Include="IR\CallExpression.cs" />
+    <Compile Include="IR\MultiplyExpression.cs" />
+    <Compile Include="IR\NegativeExpression.cs" />
+    <Compile Include="IR\NewExpression.cs" />
+    <Compile Include="IR\Node.cs" />
+    <Compile Include="IR\NodeFactory.cs" />
+    <Compile Include="IR\NotEqualExpression.cs" />
+    <Compile Include="IR\NodeType.cs" />
+    <Compile Include="IR\NotSameExpression.cs" />
+    <Compile Include="IR\NullLiteral.cs" />
+    <Compile Include="IR\LogicalOrExpression.cs" />
+    <Compile Include="IR\ObjectLiteral.cs" />
+    <Compile Include="IR\ParenExpression.cs" />
+    <Compile Include="IR\PositiveExpression.cs" />
+    <Compile Include="IR\PrimitiveLiteral.cs" />
+    <Compile Include="IR\PrimitiveValueLiteral.cs" />
+    <Compile Include="IR\Program.cs" />
+    <Compile Include="IR\PropertyAssignment.cs" />
+    <Compile Include="IR\ReadIdentifierExpression.cs" />
+    <Compile Include="IR\ReadIndexerExpression.cs" />
+    <Compile Include="IR\ReadPropertyExpression.cs" />
+    <Compile Include="IR\Reference.cs" />
+    <Compile Include="IR\RegexpLiteral.cs" />
+    <Compile Include="IR\RemainderExpression.cs" />
+    <Compile Include="IR\ReturnStatement.cs" />
+    <Compile Include="IR\RightShiftExpression.cs" />
+    <Compile Include="IR\SameExpression.cs" />
+    <Compile Include="IR\Statement.cs" />
+    <Compile Include="IR\StringLiteral.cs" />
+    <Compile Include="IR\SubtractionExpression.cs" />
+    <Compile Include="IR\SwitchStatement.cs" />
+    <Compile Include="IR\TernaryExpression.cs" />
+    <Compile Include="IR\ThisLiteral.cs" />
+    <Compile Include="IR\ThrowStatement.cs" />
+    <Compile Include="IR\ToBoolean.cs" />
+    <Compile Include="IR\ToDouble.cs" />
+    <Compile Include="IR\ToFunction.cs" />
+    <Compile Include="IR\ToInt32.cs" />
+    <Compile Include="IR\ToInteger.cs" />
+    <Compile Include="IR\ToNumber.cs" />
+    <Compile Include="IR\ToObject.cs" />
+    <Compile Include="IR\ToPrimitive.cs" />
+    <Compile Include="IR\ToString.cs" />
+    <Compile Include="IR\ToUInt16.cs" />
+    <Compile Include="IR\ToUInt32.cs" />
+    <Compile Include="IR\TryStatement.cs" />
+    <Compile Include="IR\TypeofExpression.cs" />
+    <Compile Include="IR\UnaryExpression.cs" />
+    <Compile Include="IR\UnsignedRightShiftExpression.cs" />
+    <Compile Include="IR\VariableDeclaration.cs" />
+    <Compile Include="IR\VariableDeclarationStatement.cs" />
+    <Compile Include="IR\VoidExpression.cs" />
+    <Compile Include="IR\WhileStatement.cs" />
+    <Compile Include="IR\WithStatement.cs" />
+    <Compile Include="IR\WriteIdentifierExpression.cs" />
+    <Compile Include="IR\WriteIndexerExpression.cs" />
+    <Compile Include="IR\WritePropertyExpression.cs" />
+    <Compile Include="IR\Syntax.cs" />
+    <Compile Include="IR\WriteTemporaryExpression.cs" />
+    <Compile Include="JSEngine.cs" />
+    <Compile Include="JSFunctionArguments.cs" />
+    <Compile Include="JSException.cs" />
+    <Compile Include="JSFunctionCode.cs" />
+    <Compile Include="JSFunctionContext.cs" />
+    <Compile Include="JSFunctionMetadata.cs" />
+    <Compile Include="Builtins\JSArray.cs" />
+    <Compile Include="Builtins\JSBoolean.cs" />
+    <Compile Include="Builtins\JSBuiltinConstructor.cs" />
+    <Compile Include="Builtins\JSDate.cs" />
+    <Compile Include="Builtins\JSNumber.cs" />
+    <Compile Include="Builtins\JSObject.cs" />
+    <Compile Include="Builtins\JSMath.cs" />
+    <Compile Include="Builtins\JSString.cs" />
+    <Compile Include="ILGen\BaseAsmGenerator.cs" />
+    <Compile Include="ILGen\BaseILGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILGen\CodeAsmGenerator.cs" />
+    <Compile Include="ILGen\CodeILGenerator.cs" />
+    <Compile Include="ILGen\CppAsmGenerator.cs" />
+    <Compile Include="ILGen\CppILGenerator.cs" />
+    <Compile Include="ILGen\DllAsmGenerator.cs" />
+    <Compile Include="ILGen\DllILGenerator.cs" />
+    <Compile Include="ILGen\DynamicAsmGenerator.cs" />
+    <Compile Include="ILGen\DynamicILGenerator.cs" />
+    <Compile Include="JSParser\JSParser.cs" />
+    <Compile Include="JSParser\SequentialParser.cs" />
+    <Compile Include="JSParser\SyntaxException.cs" />
+    <Compile Include="JSPropertyNameEnumerator.cs" />
+    <Compile Include="JSRuntime.cs" />
+    <Compile Include="JSRuntimeConfiguration.cs" />
+    <Compile Include="JSSourceLocation.cs" />
+    <Compile Include="JSSymbol.cs" />
+    <Compile Include="JSTaskState.cs" />
+    <Compile Include="Operations\Assign.cs" />
+    <Compile Include="Operations\AutoJSOperations.cs" />
+    <Compile Include="Operations\Binary\Addition.cs" />
+    <Compile Include="Operations\Binary\BitwiseAnd.cs" />
+    <Compile Include="Operations\Binary\BitwiseOr.cs" />
+    <Compile Include="Operations\Binary\BitwiseXor.cs" />
+    <Compile Include="Operations\Binary\Compare.cs" />
+    <Compile Include="Operations\Binary\Divide.cs" />
+    <Compile Include="Operations\Binary\Equal.cs" />
+    <Compile Include="Operations\Binary\GreaterThan.cs" />
+    <Compile Include="Operations\Binary\GreaterThanOrEqual.cs" />
+    <Compile Include="Operations\Binary\In.cs" />
+    <Compile Include="Operations\Binary\InstanceOf.cs" />
+    <Compile Include="Operations\Binary\LeftShift.cs" />
+    <Compile Include="Operations\Binary\LessThan.cs" />
+    <Compile Include="Operations\Binary\LessThanOrEqual.cs" />
+    <Compile Include="Operations\Binary\LogicalAnd.cs" />
+    <Compile Include="Operations\Binary\LogicalOr.cs" />
+    <Compile Include="Operations\Binary\Multiply.cs" />
+    <Compile Include="Operations\Binary\NotEqual.cs" />
+    <Compile Include="Operations\Binary\Remainder.cs" />
+    <Compile Include="Operations\Binary\RightShift.cs" />
+    <Compile Include="Operations\Binary\Same.cs" />
+    <Compile Include="Operations\Binary\Subtraction.cs" />
+    <Compile Include="Operations\Binary\UnsignedRightShift.cs" />
+    <Compile Include="Operations\Convert\ToChar.cs" />
+    <Compile Include="Operations\Convert\ToInt64.cs" />
+    <Compile Include="Operations\Convert\ToUInt16.cs" />
+    <Compile Include="Operations\Convert\ToFloat.cs" />
+    <Compile Include="Operations\Convert\ToBoolean.cs" />
+    <Compile Include="Operations\Convert\ToDouble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operations\Convert\ToInt32.cs" />
+    <Compile Include="Operations\Convert\ToNumber.cs" />
+    <Compile Include="Operations\Convert\ToObject.cs" />
+    <Compile Include="Operations\Convert\ToPrimitive.cs" />
+    <Compile Include="Operations\Convert\ToString.cs" />
+    <Compile Include="Operations\Error.cs" />
+    <Compile Include="Operations\ICMethods.cs" />
+    <Compile Include="Operations\Internals.cs" />
+    <Compile Include="Operations\Stack.cs" />
+    <Compile Include="Operations\Ternary\Conditional.cs" />
+    <Compile Include="Operations\Unary\BitwiseNot.cs" />
+    <Compile Include="Operations\Unary\Delete.cs" />
+    <Compile Include="Operations\Unary\LogicalNot.cs" />
+    <Compile Include="Operations\Unary\Negative.cs" />
+    <Compile Include="Operations\Unary\Positive.cs" />
+    <Compile Include="Operations\Unary\TypeOf.cs" />
+    <Compile Include="Operations\Unary\Void.cs" />
+    <Compile Include="Scope.cs" />
+    <Compile Include="Util\Conversions.cs" />
+    <Compile Include="Util\ImmutableStack.cs" />
+    <Compile Include="Util\ObjectPool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC.Util\MC.Util.csproj">
+      <Project>{511851CB-9FA4-427F-819C-D80D5380F564}</Project>
+      <Name>MC.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MCDynamicRuntime\MCDynamicRuntime.csproj">
+      <Project>{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}</Project>
+      <Name>MCDynamicRuntime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IRClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="BeforeBuild" Condition=" ('$(OS)'=='Windows_NT') And ('$(Configuration)|$(Platform)' == 'Release|AnyCPU') ">
+    <Exec Command="..\BindingGenerator\BindingGenerator.cmd --AutoJSOperations" WorkingDirectory="..\BindingGenerator" />
+  </Target>
+</Project>

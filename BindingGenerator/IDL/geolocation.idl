@@ -1,0 +1,48 @@
+
+interface Coordinates {
+  readonly attribute float latitude;
+  readonly attribute float longitude;
+  readonly attribute float altitude;
+  readonly attribute float accuracy;
+  readonly attribute float altitudeAccuracy;
+  readonly attribute float heading;
+  readonly attribute float speed;
+};
+
+interface Position {
+  readonly attribute Coordinates coords;
+  readonly attribute DOMTimeStamp timestamp;
+};
+
+interface PositionError {
+  const unsigned short PERMISSION_DENIED    = 1;
+  const unsigned short POSITION_UNAVAILABLE = 2;
+  const unsigned short TIMEOUT              = 3;
+  readonly attribute unsigned short code;
+  readonly attribute DOMString message;
+};
+
+interface PositionOptions {
+  attribute boolean enableHighAccuracy;
+  attribute long timeout;
+  attribute long maximumAge;
+};
+
+interface PositionCallback {
+  void handleEvent(Position position);
+};
+
+interface PositionErrorCallback {
+  void handleEvent(PositionError error);
+};
+
+interface Geolocation {
+  [Runtime] void getCurrentPosition(PositionCallback successCallback,
+                                    PositionErrorCallback errorCallback,
+                                    PositionOptions options);
+  [Runtime] long watchPosition(PositionCallback successCallback,
+                               PositionErrorCallback errorCallback,
+                               PositionOptions options);
+  [Runtime] void clearWatch(long watchId);
+};
+

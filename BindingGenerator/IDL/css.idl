@@ -1,0 +1,328 @@
+/*
+ * Copyright (c) 2000 World Wide Web Consortium,
+ * (Massachusetts Institute of Technology, Institut National de
+ * Recherche en Informatique et en Automatique, Keio University). All
+ * Rights Reserved. This program is distributed under the W3C's Software
+ * Intellectual Property License. This program is distributed in the
+ * hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE.
+ * See W3C License http://www.w3.org/Consortium/Legal/ for more details.
+ */
+
+// File: http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.idl
+
+// Introduced in DOM Level 2:
+[List] interface CSSRuleList {
+  readonly attribute unsigned long    length;
+  
+  CSSRule            item(unsigned long index);
+};
+
+// Introduced in DOM Level 2:
+interface CSSRule {
+
+  // RuleType
+  const unsigned short      UNKNOWN_RULE                   = 0;
+  const unsigned short      STYLE_RULE                     = 1;
+  const unsigned short      CHARSET_RULE                   = 2;
+  const unsigned short      IMPORT_RULE                    = 3;
+  const unsigned short      MEDIA_RULE                     = 4;
+  const unsigned short      FONT_FACE_RULE                 = 5;
+  const unsigned short      PAGE_RULE                      = 6;
+
+  readonly  attribute unsigned short   type;
+  attribute DOMString        cssText;
+  readonly  attribute CSSStyleSheet    parentStyleSheet;
+  readonly  attribute CSSRule          parentRule;
+};
+
+// Introduced in DOM Level 2:
+interface CSSStyleRule : CSSRule {
+  attribute DOMString            selectorText;
+  readonly  attribute CSSStyleDeclaration  style;
+};
+
+// Introduced in DOM Level 2:
+interface CSSMediaRule : CSSRule {
+  readonly attribute MediaList   media;
+  readonly attribute CSSRuleList cssRules;
+
+  unsigned long      insertRule(DOMString rule, unsigned long index);
+  void               deleteRule(unsigned long index);
+};
+
+// Introduced in DOM Level 2:
+interface CSSFontFaceRule : CSSRule {
+  readonly attribute CSSStyleDeclaration  style;
+};
+
+// Introduced in DOM Level 2:
+interface CSSPageRule : CSSRule {
+  attribute DOMString            selectorText;
+  readonly  attribute CSSStyleDeclaration  style;
+};
+
+// Introduced in DOM Level 2:
+interface CSSImportRule : CSSRule {
+  readonly attribute DOMString     href;
+  readonly attribute MediaList     media;
+  readonly attribute CSSStyleSheet styleSheet;
+};
+
+// Introduced in DOM Level 2:
+interface CSSCharsetRule : CSSRule {
+  attribute DOMString        encoding;
+};
+
+// Introduced in DOM Level 2:
+interface CSSUnknownRule : CSSRule {};
+
+// Introduced in DOM Level 2:
+[List] interface CSSStyleDeclaration {
+  DOMString getPropertyValue(DOMString propertyName);
+  CSSValue  getPropertyCSSValue(DOMString propertyName);
+  DOMString           removeProperty(DOMString propertyName);
+  DOMString getPropertyPriority(DOMString propertyName);
+  void                setProperty(DOMString propertyName, 
+                                  DOMString value, 
+                                  DOMString priority);
+  DOMString item(unsigned long index);
+
+  attribute DOMString        cssText;
+  readonly  attribute unsigned long    length;
+  readonly  attribute CSSRule          parentRule;
+
+  // CSS2Properties interface, added manually by Babak    
+  attribute DOMString        azimuth;
+  attribute DOMString        background;
+  attribute DOMString        backgroundAttachment;
+  attribute DOMString        backgroundColor;
+  attribute DOMString        backgroundImage;
+  attribute DOMString        backgroundPosition;
+  attribute DOMString        backgroundRepeat;
+  attribute DOMString        border;
+  attribute DOMString        borderCollapse;
+  attribute DOMString        borderColor;
+  attribute DOMString        borderSpacing;
+  attribute DOMString        borderStyle;
+  attribute DOMString        borderTop;
+  attribute DOMString        borderRight;
+  attribute DOMString        borderBottom;
+  attribute DOMString        borderLeft;
+  attribute DOMString        borderTopColor;
+  attribute DOMString        borderRightColor;
+  attribute DOMString        borderBottomColor;
+  attribute DOMString        borderLeftColor;
+  attribute DOMString        borderTopStyle;
+  attribute DOMString        borderRightStyle;
+  attribute DOMString        borderBottomStyle;
+  attribute DOMString        borderLeftStyle;
+  attribute DOMString        borderTopWidth;
+  attribute DOMString        borderRightWidth;
+  attribute DOMString        borderBottomWidth;
+  attribute DOMString        borderLeftWidth;
+  attribute DOMString        borderWidth;
+  attribute DOMString        bottom;
+  attribute DOMString        captionSide;
+  attribute DOMString        clear;
+  attribute DOMString        clip;
+  attribute DOMString        color;
+  attribute DOMString        content;
+  attribute DOMString        counterIncrement;
+  attribute DOMString        counterReset;
+  attribute DOMString        cue;
+  attribute DOMString        cueAfter;
+  attribute DOMString        cueBefore;
+  attribute DOMString        cursor;
+  attribute DOMString        direction;
+  attribute DOMString        display;
+  attribute DOMString        elevation;
+  attribute DOMString        emptyCells;
+  attribute DOMString        cssFloat;
+  attribute DOMString        font;
+  attribute DOMString        fontFamily;
+  attribute DOMString        fontSize;
+  attribute DOMString        fontSizeAdjust;
+  attribute DOMString        fontStretch;
+  attribute DOMString        fontStyle;
+  attribute DOMString        fontVariant;
+  attribute DOMString        fontWeight;
+  attribute DOMString        height;
+  attribute DOMString        left;
+  attribute DOMString        letterSpacing;
+  attribute DOMString        lineHeight;
+  attribute DOMString        listStyle;
+  attribute DOMString        listStyleImage;
+  attribute DOMString        listStylePosition;
+  attribute DOMString        listStyleType;
+  attribute DOMString        margin;
+  attribute DOMString        marginTop;
+  attribute DOMString        marginRight;
+  attribute DOMString        marginBottom;
+  attribute DOMString        marginLeft;
+  attribute DOMString        markerOffset;
+  attribute DOMString        marks;
+  attribute DOMString        maxHeight;
+  attribute DOMString        maxWidth;
+  attribute DOMString        minHeight;
+  attribute DOMString        minWidth;
+  attribute DOMString        orphans;
+  attribute DOMString        outline;
+  attribute DOMString        outlineColor;
+  attribute DOMString        outlineStyle;
+  attribute DOMString        outlineWidth;
+  attribute DOMString        overflow;
+  attribute DOMString        padding;
+  attribute DOMString        paddingTop;
+  attribute DOMString        paddingRight;
+  attribute DOMString        paddingBottom;
+  attribute DOMString        paddingLeft;
+  attribute DOMString        page;
+  attribute DOMString        pageBreakAfter;
+  attribute DOMString        pageBreakBefore;
+  attribute DOMString        pageBreakInside;
+  attribute DOMString        pause;
+  attribute DOMString        pauseAfter;
+  attribute DOMString        pauseBefore;
+  attribute DOMString        pitch;
+  attribute DOMString        pitchRange;
+  attribute DOMString        playDuring;
+  attribute DOMString        position;
+  attribute DOMString        quotes;
+  attribute DOMString        richness;
+  attribute DOMString        right;
+  attribute DOMString        size;
+  attribute DOMString        speak;
+  attribute DOMString        speakHeader;
+  attribute DOMString        speakNumeral;
+  attribute DOMString        speakPunctuation;
+  attribute DOMString        speechRate;
+  attribute DOMString        stress;
+  attribute DOMString        tableLayout;
+  attribute DOMString        textAlign;
+  attribute DOMString        textDecoration;
+  attribute DOMString        textIndent;
+  attribute DOMString        textShadow;
+  attribute DOMString        textTransform;
+  attribute DOMString        top;
+  attribute DOMString        unicodeBidi;
+  attribute DOMString        verticalAlign;
+  attribute DOMString        visibility;
+  attribute DOMString        voiceFamily;
+  attribute DOMString        volume;
+  attribute DOMString        whiteSpace;
+  attribute DOMString        widows;
+  attribute DOMString        width;
+  attribute DOMString        wordSpacing;
+  attribute DOMString        zIndex;
+};
+
+interface InlineStyleDeclaration : CSSStyleDeclaration {};
+interface ComputedStyleDeclaration : CSSStyleDeclaration {};
+
+// Introduced in DOM Level 2:
+interface CSSValue {
+
+  // UnitTypes
+  const unsigned short      CSS_INHERIT                    = 0;
+  const unsigned short      CSS_PRIMITIVE_VALUE            = 1;
+  const unsigned short      CSS_VALUE_LIST                 = 2;
+  const unsigned short      CSS_CUSTOM                     = 3;
+
+  attribute DOMString        cssText;
+  readonly  attribute unsigned short   cssValueType;
+};
+
+// Introduced in DOM Level 2:
+interface CSSPrimitiveValue : CSSValue {
+
+  // UnitTypes
+  const unsigned short      CSS_UNKNOWN                    = 0;
+  const unsigned short      CSS_NUMBER                     = 1;
+  const unsigned short      CSS_PERCENTAGE                 = 2;
+  const unsigned short      CSS_EMS                        = 3;
+  const unsigned short      CSS_EXS                        = 4;
+  const unsigned short      CSS_PX                         = 5;
+  const unsigned short      CSS_CM                         = 6;
+  const unsigned short      CSS_MM                         = 7;
+  const unsigned short      CSS_IN                         = 8;
+  const unsigned short      CSS_PT                         = 9;
+  const unsigned short      CSS_PC                         = 10;
+  const unsigned short      CSS_DEG                        = 11;
+  const unsigned short      CSS_RAD                        = 12;
+  const unsigned short      CSS_GRAD                       = 13;
+  const unsigned short      CSS_MS                         = 14;
+  const unsigned short      CSS_S                          = 15;
+  const unsigned short      CSS_HZ                         = 16;
+  const unsigned short      CSS_KHZ                        = 17;
+  const unsigned short      CSS_DIMENSION                  = 18;
+  const unsigned short      CSS_STRING                     = 19;
+  const unsigned short      CSS_URI                        = 20;
+  const unsigned short      CSS_IDENT                      = 21;
+  const unsigned short      CSS_ATTR                       = 22;
+  const unsigned short      CSS_COUNTER                    = 23;
+  const unsigned short      CSS_RECT                       = 24;
+  const unsigned short      CSS_RGBCOLOR                   = 25;
+
+  readonly attribute unsigned short   primitiveType;
+
+  void               setFloatValue(unsigned short unitType, 
+                                   float floatValue);
+  float              getFloatValue(unsigned short unitType);
+  void               setStringValue(unsigned short stringType, 
+                                    DOMString stringValue);
+  DOMString          getStringValue();
+  Counter            getCounterValue();
+  Rect               getRectValue();
+  RGBColor           getRGBColorValue();
+};
+
+// Introduced in DOM Level 2:
+[List] interface CSSValueList : CSSValue {
+  readonly attribute unsigned long    length;
+
+  CSSValue           item(unsigned long index);
+};
+
+// Introduced in DOM Level 2:
+interface RGBColor {
+  readonly attribute CSSPrimitiveValue  red;
+  readonly attribute CSSPrimitiveValue  green;
+  readonly attribute CSSPrimitiveValue  blue;
+};
+
+// Introduced in DOM Level 2:
+interface Rect {
+  readonly attribute CSSPrimitiveValue  top;
+  readonly attribute CSSPrimitiveValue  right;
+  readonly attribute CSSPrimitiveValue  bottom;
+  readonly attribute CSSPrimitiveValue  left;
+};
+
+// Introduced in DOM Level 2:
+interface Counter {
+  readonly attribute DOMString        identifier;
+  readonly attribute DOMString        listStyle;
+  readonly attribute DOMString        separator;
+};
+
+// Introduced in DOM Level 2:
+interface CSSStyleSheet : StyleSheet {
+  readonly attribute CSSRule          ownerRule;
+  readonly attribute CSSRuleList      cssRules;
+
+  unsigned long      insertRule(DOMString rule, 
+                                unsigned long index);
+  void               deleteRule(unsigned long index);
+};
+
+interface JSStyleSheet : CSSStyleSheet {};
+interface StyleElementStyleSheet : JSStyleSheet {};
+interface ExternalStyleSheet : JSStyleSheet {};
+
+// Introduced in DOM   Level 2:
+interface DOMImplementationCSS : DOMImplementation {
+  CSSStyleSheet      createCSSStyleSheet(DOMString title, 
+                                         DOMString media);
+};

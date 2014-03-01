@@ -1,0 +1,376 @@
+/*
+* Copyright (c) 2000 World Wide Web Consortium,
+* (Massachusetts Institute of Technology, Institut National de
+* Recherche en Informatique et en Automatique, Keio University). All
+* Rights Reserved. This program is distributed under the W3C's Software
+* Intellectual Property License. This program is distributed in the
+* hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+* the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+* PURPOSE.
+* See W3C License http://www.w3.org/Consortium/Legal/ for more details.
+*/
+
+// File: http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/dom.idl
+
+typedef   unsigned long long DOMTimeStamp;
+
+/*
+exception DOMException {
+  unsigned short   code;
+
+  // ExceptionCode
+  const unsigned short      INDEX_SIZE_ERR                 = 1;
+  const unsigned short      DOMSTRING_SIZE_ERR             = 2;
+  const unsigned short      HIERARCHY_REQUEST_ERR          = 3;
+  const unsigned short      WRONG_DOCUMENT_ERR             = 4;
+  const unsigned short      INVALID_CHARACTER_ERR          = 5;
+  const unsigned short      NO_DATA_ALLOWED_ERR            = 6;
+  const unsigned short      NO_MODIFICATION_ALLOWED_ERR    = 7;
+  const unsigned short      NOT_FOUND_ERR                  = 8;
+  const unsigned short      NOT_SUPPORTED_ERR              = 9;
+  const unsigned short      INUSE_ATTRIBUTE_ERR            = 10;
+  // Introduced in DOM Level 2:
+  const unsigned short      INVALID_STATE_ERR              = 11;
+  // Introduced in DOM Level 2:
+  const unsigned short      SYNTAX_ERR                     = 12;
+  // Introduced in DOM Level 2:
+  const unsigned short      INVALID_MODIFICATION_ERR       = 13;
+  // Introduced in DOM Level 2:
+  const unsigned short      NAMESPACE_ERR                  = 14;
+  // Introduced in DOM Level 2:
+  const unsigned short      INVALID_ACCESS_ERR             = 15;
+};
+*/
+
+// FIXME: A quick hack until we actually generate code for exceptions.
+interface DOMException {
+  readonly attribute DOMString type;
+  readonly attribute DOMString message;
+  readonly attribute unsigned short code;
+
+  // ExceptionCode
+  const unsigned short      INDEX_SIZE_ERR                 = 1;
+  const unsigned short      DOMSTRING_SIZE_ERR             = 2;
+  const unsigned short      HIERARCHY_REQUEST_ERR          = 3;
+  const unsigned short      WRONG_DOCUMENT_ERR             = 4;
+  const unsigned short      INVALID_CHARACTER_ERR          = 5;
+  const unsigned short      NO_DATA_ALLOWED_ERR            = 6;
+  const unsigned short      NO_MODIFICATION_ALLOWED_ERR    = 7;
+  const unsigned short      NOT_FOUND_ERR                  = 8;
+  const unsigned short      NOT_SUPPORTED_ERR              = 9;
+  const unsigned short      INUSE_ATTRIBUTE_ERR            = 10;
+
+  // Introduced in DOM Level 2:
+  const unsigned short      INVALID_STATE_ERR              = 11;
+  const unsigned short      SYNTAX_ERR                     = 12;
+  const unsigned short      INVALID_MODIFICATION_ERR       = 13;
+  const unsigned short      NAMESPACE_ERR                  = 14;
+  const unsigned short      INVALID_ACCESS_ERR             = 15;
+
+  // Introduced in DOM Level 3:
+  const unsigned short      VALIDATION_ERR                 = 16;
+  const unsigned short      TYPE_MISMATCH_ERR              = 17;
+};
+
+interface IndexSizeException             : DOMException {};
+interface DOMStringSizeException         : DOMException {};
+interface HierarchyRequestException      : DOMException {};
+interface WrongDocumentException         : DOMException {};
+interface InvalidCharacterException      : DOMException {};
+interface NoDataAllowedException         : DOMException {};
+interface NoModificationAllowedException : DOMException {};
+interface NotFoundException              : DOMException {};
+interface NotSupportedException          : DOMException {};
+interface InuseAttributeException        : DOMException {};
+interface InvalidStateException          : DOMException {};
+interface SyntaxException                : DOMException {};
+interface InvalidModificationException   : DOMException {};
+interface NamespaceException             : DOMException {};
+interface InvalidAccessException         : DOMException {};
+interface ValidationException            : DOMException {};
+interface TypeMismatchException          : DOMException {};
+
+interface DOMImplementation {
+  boolean            hasFeature(DOMString feature, 
+                                DOMString version);
+  // Introduced in DOM Level 2:
+  [Unimplemented]
+  DocumentType       createDocumentType(DOMString qualifiedName, 
+                                        DOMString publicId, 
+                                        DOMString systemId);
+  // Introduced in DOM Level 2:
+  [Unimplemented]
+  Document           createDocument(DOMString namespaceURI, 
+                                    DOMString qualifiedName, 
+                                    DocumentType doctype);
+};
+
+interface EventTarget {
+	[Runtime] void addEventListener(DOMString type, Function listener, boolean useCapture);
+	[Runtime] void removeEventListener(DOMString type, Function listener, boolean useCapture);
+	[Runtime]          void dispatchEvent(Event evt);
+	
+	[EventHandler] attribute Function? onDOMContentLoaded;
+};
+
+interface Node : EventTarget {
+
+  // NodeType
+  const unsigned short      ELEMENT_NODE                   = 1;
+  const unsigned short      ATTRIBUTE_NODE                 = 2;
+  const unsigned short      TEXT_NODE                      = 3;
+  const unsigned short      CDATA_SECTION_NODE             = 4;
+  const unsigned short      ENTITY_REFERENCE_NODE          = 5;
+  const unsigned short      ENTITY_NODE                    = 6;
+  const unsigned short      PROCESSING_INSTRUCTION_NODE    = 7;
+  const unsigned short      COMMENT_NODE                   = 8;
+  const unsigned short      DOCUMENT_NODE                  = 9;
+  const unsigned short      DOCUMENT_TYPE_NODE             = 10;
+  const unsigned short      DOCUMENT_FRAGMENT_NODE         = 11;
+  const unsigned short      NOTATION_NODE                  = 12;
+
+  readonly attribute DOMString        nodeName;
+                     attribute DOMString        nodeValue;
+
+  readonly attribute unsigned short   nodeType;
+  readonly attribute Node             parentNode;
+  readonly attribute NodeList         childNodes;
+  readonly attribute Node             firstChild;
+  readonly attribute Node             lastChild;
+  readonly attribute Node             previousSibling;
+  readonly attribute Node             nextSibling;
+  readonly attribute NamedNodeMap     attributes;
+  // Modified in DOM Level 2:
+  readonly attribute Document         ownerDocument;
+  Node               insertBefore(Node newChild, 
+                                  Node refChild);
+  Node               replaceChild(Node newChild, 
+                                  Node oldChild);
+  Node               removeChild(Node oldChild);
+  Node               appendChild(Node newChild);
+  boolean  hasChildNodes();
+  Node     cloneNode(boolean deep);
+  // Modified in DOM Level 2:
+  [Unimplemented] void                 normalize();
+  // Introduced in DOM Level 2:
+  [Unimplemented]
+  boolean            isSupported(DOMString feature, 
+                                 DOMString version);
+  // Introduced in DOM Level 2:
+  readonly attribute DOMString        namespaceURI;
+  // Introduced in DOM Level 2:
+                     attribute DOMString        prefix;
+
+  // Introduced in DOM Level 2:
+  readonly attribute DOMString        localName;
+  // Introduced in DOM Level 2:
+  boolean            hasAttributes();
+};
+
+[List] interface NodeList {
+  Node               item(unsigned long index);
+  readonly attribute unsigned long    length;
+};
+
+[List] interface ChildNodeList : NodeList {};
+
+[List] interface PredicateNodeList : NodeList {};
+[List] interface TagNameNodeList   : PredicateNodeList {};
+[List] interface NameAttrNodeList  : PredicateNodeList {};
+[List] interface SelectorNodeList  : PredicateNodeList {};
+
+[List] interface NamedNodeMap {
+  Node        getNamedItem(DOMString name);
+  Node                  setNamedItem(Node arg);
+  [Unimplemented] Node  removeNamedItem(DOMString name);
+  Node        item(unsigned long index);
+  readonly attribute unsigned long    length;
+  // Introduced in DOM Level 2:
+  [Unimplemented] Node  getNamedItemNS(DOMString namespaceURI, 
+                                                DOMString localName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Node           setNamedItemNS(Node arg);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Node           removeNamedItemNS(DOMString namespaceURI, 
+                                                   DOMString localName);
+};
+
+interface CharacterData : Node {
+                     attribute DOMString        data;
+
+  readonly attribute unsigned long    length;
+
+  [Unimplemented] DOMString substringData(unsigned long offset, 
+                                          unsigned long count);
+  [Unimplemented] void      appendData(DOMString arg);
+  [Unimplemented] void      insertData(unsigned long offset, 
+                                       DOMString arg);
+  [Unimplemented] void      deleteData(unsigned long offset, 
+                                       unsigned long count);
+  void                      replaceData(unsigned long offset, 
+                                        unsigned long count, 
+                                        DOMString arg);
+};
+
+interface Attr : Node {
+  readonly attribute DOMString        name;
+  readonly attribute boolean          specified;
+  [Unimplemented=Setting]
+                     attribute DOMString        value;
+
+  // Introduced in DOM Level 2:
+  readonly attribute Element          ownerElement;
+};
+
+interface Element : Node {
+  readonly attribute DOMString        tagName;
+
+  [Runtime] DOMString  getAttribute(DOMString name);
+  [Runtime] void                setAttribute(DOMString name, 
+                                             DOMString value);
+  [Private] DOMString  getContentAttribute(DOMString name);
+  [Private] void                setContentAttribute(DOMString name, DOMString value);
+  [Unimplemented] void                removeAttribute(DOMString name);
+  [Unimplemented] Attr       getAttributeNode(DOMString name);
+  [Unimplemented] Attr                setAttributeNode(Attr newAttr);
+  [Unimplemented] Attr                removeAttributeNode(Attr oldAttr);
+  NodeList                  getElementsByTagName(DOMString name);
+  // Introduced in DOM Level 2:
+  [Unimplemented] DOMString  getAttributeNS(DOMString namespaceURI, 
+                                                     DOMString localName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] void                setAttributeNS(DOMString namespaceURI, 
+                                                     DOMString qualifiedName, 
+                                                     DOMString value);
+  // Introduced in DOM Level 2:
+  [Unimplemented] void                removeAttributeNS(DOMString namespaceURI, 
+                                                        DOMString localName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Attr       getAttributeNodeNS(DOMString namespaceURI, 
+                                                         DOMString localName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Attr                setAttributeNodeNS(Attr newAttr);
+  // Introduced in DOM Level 2:
+  [Unimplemented] NodeList   getElementsByTagNameNS(DOMString namespaceURI, 
+                                                             DOMString localName);
+  // Introduced in DOM Level 2:
+  boolean                   hasAttribute(DOMString name);
+  // Introduced in DOM Level 2:
+  boolean                   hasAttributeNS(DOMString namespaceURI, 
+                                                     DOMString localName);
+
+  // Selector API: Added by Babak
+  Element                   querySelector(DOMString selectors);
+  NodeList                  querySelectorAll(DOMString selectors);
+  // Added by Babak to Implement ElementCSSInlineStyle interface
+  readonly attribute CSSStyleDeclaration  style;   
+  
+  //Added by Behnam for supporting most UI capability, refer to https://developer.mozilla.org/en/DOM/element
+  readonly attribute long offsetHeight;
+  readonly attribute long offsetLeft;
+  readonly attribute long offsetTop;
+  readonly attribute long offsetWidth;
+
+  readonly attribute long scrollHeight;
+  readonly attribute long scrollLeft;
+  readonly attribute long scrollTop;
+  readonly attribute long scrollWidth;
+
+  readonly attribute long clientHeight;
+  readonly attribute long clientLeft;
+  readonly attribute long clientTop;
+  readonly attribute long clientWidth;
+};
+
+interface Text : CharacterData {
+  Text               splitText(unsigned long offset);
+};
+
+interface Comment : CharacterData {
+};
+
+interface CDATASection : Text {
+};
+
+interface DocumentType : Node {
+  [Unimplemented] readonly attribute DOMString        name;
+  [Unimplemented] readonly attribute NamedNodeMap     entities;
+  [Unimplemented] readonly attribute NamedNodeMap     notations;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute DOMString        publicId;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute DOMString        systemId;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute DOMString        internalSubset;
+};
+
+interface Notation : Node {
+  [Unimplemented] readonly attribute DOMString        publicId;
+  [Unimplemented] readonly attribute DOMString        systemId;
+};
+
+interface Entity : Node {
+  [Unimplemented] readonly attribute DOMString        publicId;
+  [Unimplemented] readonly attribute DOMString        systemId;
+  [Unimplemented] readonly attribute DOMString        notationName;
+};
+
+interface EntityReference : Node {
+};
+
+interface ProcessingInstruction : Node {
+  [Unimplemented] readonly   attribute DOMString        target;
+  [Unimplemented] attribute DOMString        data;
+};
+
+interface DocumentFragment : Node {
+};
+
+// This is a placeholder because we don't wrap events.
+interface Event {};
+
+interface Document : Node {
+                 readonly attribute DocumentType      doctype;
+  [Unimplemented] readonly attribute DOMImplementation implementation;
+                 readonly attribute Element           documentElement;
+
+  Element                                   createElement(DOMString tagName);
+  DocumentFragment                createDocumentFragment();
+  Text                            createTextNode(DOMString data);
+  Comment                         createComment(DOMString data);
+  [Unimplemented] CDATASection              createCDATASection(DOMString data);
+  [Unimplemented] ProcessingInstruction     createProcessingInstruction(DOMString target, 
+                                                                        DOMString data);
+  [Unimplemented] Attr                      createAttribute(DOMString name);
+  [Unimplemented] EntityReference           createEntityReference(DOMString name);
+  NodeList                        getElementsByTagName(DOMString tagname);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Node                      importNode(Node importedNode, 
+                                                       boolean deep);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Element                   createElementNS(DOMString namespaceURI, 
+                                                            DOMString qualifiedName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] Attr                      createAttributeNS(DOMString namespaceURI, 
+                                                              DOMString qualifiedName);
+  // Introduced in DOM Level 2:
+  [Unimplemented] NodeList         getElementsByTagNameNS(DOMString namespaceURI, 
+                                                                   DOMString localName);
+  // Introduced in DOM Level 2:
+  Element                         getElementById(DOMString elementId);
+
+  //All the followings are added by Babak
+  // Selector API
+  Element                         querySelector(DOMString selectors);
+  NodeList                        querySelectorAll(DOMString selectors);
+
+  //from the stylesheets.idl. This is a described in DOM Level2 Style Section 1.3.
+  readonly attribute StyleSheetList      styleSheets;
+
+  [Unimplemented] CSSStyleDeclaration     getOverrideStyle(Element elt, 
+                                                                    DOMString pseudoElt);
+  readonly       attribute ContentWindow defaultView;
+  [Unimplemented] attribute Location      location;
+
+  [Runtime] Event                         createEvent(DOMString eventInterface);
+};

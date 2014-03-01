@@ -1,0 +1,22 @@
+======== Requirements ========
+1. mono 2.8+ (with xbuild) 
+2. make sure xbuild is in your PATH
+
+========= Compilation ========
+Run make in the root directory
+
+If you got errors, make sure the paths specified at top of the Makefile are correct. 
+
+========== Execution ==========
+Run the invoker like this:
+    MCJSInvoker/bin/mcjsinvoker ./CallNativeCode/bin/Debug/CallNativeCode.exe
+Or simply type:
+    make run
+
+
+To run MCJS Engine: (This is experimental)
+========== Execution ==========
+1. Run the invoker in the following format:
+	MCJSInvoker/bin/mcjsinvoker <path to MCJS executable> <MCJS arguments>
+
+e.g.,   MCJSInvoker/bin/mcjsinvoker ../../MCJavascript/MCJavascript/bin/Release/MCJavascript.exe -t ../../MCJavascript/Tests/Performance/ArrayAdd.js

@@ -1,0 +1,4 @@
+*The MuscalietJS project was initiated by Qualcomm Technologies, Inc., and is maintained by Professor Ben Hardekopf of the University of California, Santa Barbara.
+*This file contains a list of a number of contributors who have made valuable code contributions to this project:
+
+*Ben Hardekopf 2014 …

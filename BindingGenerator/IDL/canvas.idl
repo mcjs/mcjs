@@ -1,0 +1,99 @@
+interface CanvasRenderingContext2D {
+  readonly attribute HTMLCanvasElement canvas;
+ 
+  [Setter(DOMString value)] attribute CanvasStyle  strokeStyle; 
+  [Setter(DOMString value)] attribute CanvasStyle  fillStyle;
+  attribute float        globalAlpha;
+  attribute DOMString    globalCompositeOperation;
+  attribute float        lineWidth;
+  attribute DOMString    lineCap;
+  attribute DOMString    lineJoin;
+  attribute float        miterLimit;
+  attribute float        shadowOffsetX;
+  attribute float        shadowOffsetY;
+  attribute float        shadowBlur;
+  attribute DOMString    shadowColor;
+  attribute DOMString    font;
+  attribute DOMString    textAlign;
+  attribute DOMString    textBaseline;
+
+  void beginPath();
+  void closePath();
+  void fill();
+  void stroke();
+  void clip();
+  void save();
+  void restore();
+
+  void moveTo(float x, float y);
+  void lineTo(float x, float y);
+  void quadraticCurveTo(float cpx, float cpy, float x, float y);
+  void bezierCurveTo(float cp1x, float cp1y, float cp2x, float cp2y, float x, float y);
+  void arcTo(float x0, float y0, float x1, float y1, float radius);
+  void arc(float x, float y, float r, float sa, float ea, boolean clockwise);
+  void rect(float x, float y, float width, float height);
+  boolean isPointInPath(float x, float y);
+
+  void scale(float sx, float sy);
+  void rotate(float angleInRadians);
+  void translate(float tx, float ty);
+  void transform(float m11, float m12, float m21, float m22, float dx, float dy);
+  void setTransform(float m11, float m12, float m21, float m22, float dx, float dy);
+
+  void clearRect(float x, float y, float width, float height);
+  void fillRect(float x, float y, float width, float height);
+  void strokeRect(float x, float y, float width, float height);
+
+  void fillText(DOMString text, float x, float y);
+  void fillText(DOMString text, float x, float y, unsigned long maxwidth);
+  void strokeText(DOMString text, float x, float y);
+  void strokeText(DOMString text, float x, float y, unsigned long maxwidth);
+
+  TextMetrics measureText(DOMString text);
+
+  // The argument 'element' may be an HTMLImageElement, HTMLCanvasElement, or HTMLVideoElement.
+  void drawImage(HTMLElement element, float x, float y);
+  void drawImage(HTMLElement element, float x, float y, float width, float height);
+  void drawImage(HTMLElement element, float sx, float sy, float swidth, float sheight, float dx, float dy, float dwidth, float dheight);
+  
+  CanvasGradient createLinearGradient(float x0, float y0, float x1, float y1);
+  CanvasGradient createRadialGradient(float x0, float y0, float r0, float x1, float y1, float r1);
+
+  CanvasPattern createPattern(HTMLCanvasElement element, DOMString repetitionType);
+
+  ImageData createImageData(float width, float height);
+  ImageData getImageData(float sx, float sy, float sw, float sh);
+  void putImageData(ImageData id, float dx, float dy);
+  void putImageData(ImageData id, float dx, float dy, float dirtyX, float dirtyY, float dirtyWidth, float dirtyHeight);
+};
+
+interface CanvasGradient {
+  void addColorStop(float offset, DOMString color);
+};
+
+interface CanvasPattern {
+};
+
+interface CanvasStyle {
+};
+
+interface TextMetrics {
+  readonly attribute float width;
+};
+
+interface ImageData {
+  readonly attribute unsigned long width;
+  readonly attribute unsigned long height;
+  readonly attribute CanvasPixelArray data;
+};
+
+interface CanvasPixelArray {
+  readonly attribute unsigned long length;
+};
+
+interface HTMLCanvasElement : HTMLElement {
+  attribute unsigned long width;
+  attribute unsigned long height;
+  [Unimplemented] DOMString toDataURL(DOMString type);
+  CanvasRenderingContext2D getContext(DOMString type);
+};

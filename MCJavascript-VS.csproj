@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B90B678B-89A0-4BFE-B655-73633BB6301E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MCJavascript</RootNamespace>
+    <AssemblyName>MCJavascript</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\MCJavascript\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ENABLE_RR, ENABLE_HOOKS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>.\MCJavascript\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\MCJavascript\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>.\MCJavascript\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MCJavascript\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MC.Util\Configuration.cs" />
+    <Compile Include="MC.Util\Counters.cs" />
+    <Compile Include="MC.Util\Diagnose.cs" />
+    <Compile Include="MC.Util\ISourceLocation.cs" />
+    <Compile Include="MC.Util\Options.cs" />
+    <Compile Include="MC.Util\TimeCounter.cs" />
+    <Compile Include="MC.Util\Timers.cs" />
+    <Compile Include="MCDynamicRuntime\CallFrame.cs" />
+    <Compile Include="MCDynamicRuntime\DArray.cs" />
+    <Compile Include="MCDynamicRuntime\DArrayBase.cs" />
+    <Compile Include="MCDynamicRuntime\DForwardingProperty.cs" />
+    <Compile Include="MCDynamicRuntime\DFunction.cs" />
+    <Compile Include="MCDynamicRuntime\DFunctionCode.cs" />
+    <Compile Include="MCDynamicRuntime\DFunctionCodeCache.cs" />
+    <Compile Include="MCDynamicRuntime\DFunctionMetadata.cs" />
+    <Compile Include="MCDynamicRuntime\DFunctionSignature.cs" />
+    <Compile Include="MCDynamicRuntime\DNull.cs" />
+    <Compile Include="MCDynamicRuntime\DObject.cs" />
+    <Compile Include="MCDynamicRuntime\DProperty.cs" />
+    <Compile Include="MCDynamicRuntime\DRegExp.cs" />
+    <Compile Include="MCDynamicRuntime\DString.cs" />
+    <Compile Include="MCDynamicRuntime\DUndefined.cs" />
+    <Compile Include="MCDynamicRuntime\DValue.cs" />
+    <Compile Include="MCDynamicRuntime\Engine.cs" />
+    <Compile Include="MCDynamicRuntime\IMdrVisitor.cs" />
+    <Compile Include="MCDynamicRuntime\PropertyCache.cs" />
+    <Compile Include="MCDynamicRuntime\PropertyDescriptor.cs" />
+    <Compile Include="MCDynamicRuntime\PropertyMap.cs" />
+    <Compile Include="MCDynamicRuntime\PropertyMapMetadata.cs" />
+    <Compile Include="MCDynamicRuntime\Runtime.cs" />
+    <Compile Include="MCDynamicRuntime\RuntimeConfiguration.cs" />
+    <Compile Include="MCDynamicRuntime\TypedArray.cs" />
+    <Compile Include="MCDynamicRuntime\ValueTypes.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DArrayBuffer.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DFloat32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DFloat64Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSArrayBuffer.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSError.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSFunction.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSGlobalObject.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DInt16Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DInt32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DInt8Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DTypedArray.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DUint16Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DUint32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\DUint8Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSFloat32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSFloat64Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSInt16Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSInt32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSRegExp.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSInt8Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSTypedArrayBase.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSUint16Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSUint32Array.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\TypedArray\JSUint8Array.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\Algorithm.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\Analyzer.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGeneratorWithInlineCache.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGeneratorWithSpecialization.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGeneratorWithProfiling.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\FunctionInliner.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\IRCloner.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\Profiler.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGenerationInfo.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGeneratorBase.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\CodeGeneratorLight.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\FunctionDeclarationHoister.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\ImplicitReturnInserter.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\Interpreter.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\LabelInfoManager.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\LocalVarManager.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\MethodResolver.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\TypeCalculator.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\TypeInferer.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\Types.cs" />
+    <Compile Include="MCJavascriptRuntime\CodeGen\ValueTypePairs.cs" />
+    <Compile Include="MCJavascriptRuntime\DepthFirstVisitor.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\ValidatingILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\IRGraphWriter.cs" />
+    <Compile Include="MCJavascriptRuntime\IRValidator.cs" />
+    <Compile Include="MCJavascriptRuntime\IRXMLSerializer.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\AdditionExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\AssignmentOperator.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ArrayLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ConversionExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\GuardedCast.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\IClassHierarchyVisitor.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Identifier.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Indexer.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InlinedInvocation.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InternalCall.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InternalExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InternalInvocation.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InternalNew.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LogicalAndExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BinaryExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BitwiseAndExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BitwiseNotExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BitwiseOrExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BitwiseXorExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BlockStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BooleanLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\BreakStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\CaseClause.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\CatchClause.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\CommaOperatorExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ContinueStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\DeleteExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\DivideExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\DoubleLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\DoWhileStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\EmptyStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\EqualExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Expression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ExpressionStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\FinallyClause.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ForEachInStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ForStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\FunctionDeclarationStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\FunctionExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\GotoStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\GreaterExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\GreaterOrEqualExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\INodeVisitor.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\IfStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\InstanceOfExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\IntLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Invocation.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LabelStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LeftShiftExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LesserExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LesserOrEqualExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Literal.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LogicalNotExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LoopStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\CallExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\MultiplyExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NegativeExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NewExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Node.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NodeFactory.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NotEqualExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NodeType.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NotSameExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\NullLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\LogicalOrExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ObjectLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ParenExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\PositiveExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\PrimitiveLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\PrimitiveValueLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Program.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\PropertyAssignment.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ReadIdentifierExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ReadIndexerExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ReadPropertyExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Reference.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\RegexpLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\RemainderExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ReturnStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\RightShiftExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\SameExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Statement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\StringLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\SubtractionExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\SwitchStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\TernaryExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ThisLiteral.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ThrowStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToBoolean.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToDouble.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToFunction.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToInt32.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToInteger.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToNumber.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToObject.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToPrimitive.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToString.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToUInt16.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\ToUInt32.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\TryStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\TypeofExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\UnaryExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\UnsignedRightShiftExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\VariableDeclaration.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\VariableDeclarationStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\VoidExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WhileStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WithStatement.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WriteIdentifierExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WriteIndexerExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WritePropertyExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\Syntax.cs" />
+    <Compile Include="MCJavascriptRuntime\IR\WriteTemporaryExpression.cs" />
+    <Compile Include="MCJavascriptRuntime\JSEngine.cs" />
+    <Compile Include="MCJavascriptRuntime\JSFunctionArguments.cs" />
+    <Compile Include="MCJavascriptRuntime\JSException.cs" />
+    <Compile Include="MCJavascriptRuntime\JSFunctionCode.cs" />
+    <Compile Include="MCJavascriptRuntime\JSFunctionContext.cs" />
+    <Compile Include="MCJavascriptRuntime\JSFunctionMetadata.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSArray.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSBoolean.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSBuiltinConstructor.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSDate.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSNumber.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSObject.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSMath.cs" />
+    <Compile Include="MCJavascriptRuntime\Builtins\JSString.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\BaseAsmGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\BaseILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\CodeAsmGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\CodeILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\CppAsmGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\CppILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\DllAsmGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\DllILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\DynamicAsmGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\ILGen\DynamicILGenerator.cs" />
+    <Compile Include="MCJavascriptRuntime\JSParser\JSParser.cs" />
+    <Compile Include="MCJavascriptRuntime\JSParser\SequentialParser.cs" />
+    <Compile Include="MCJavascriptRuntime\JSParser\SyntaxException.cs" />
+    <Compile Include="MCJavascriptRuntime\JSPropertyNameEnumerator.cs" />
+    <Compile Include="MCJavascriptRuntime\JSRuntime.cs" />
+    <Compile Include="MCJavascriptRuntime\JSRuntimeConfiguration.cs" />
+    <Compile Include="MCJavascriptRuntime\JSSourceLocation.cs" />
+    <Compile Include="MCJavascriptRuntime\JSSymbol.cs" />
+    <Compile Include="MCJavascriptRuntime\JSTaskState.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Assign.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\AutoJSOperations.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Addition.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\BitwiseAnd.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\BitwiseOr.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\BitwiseXor.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Compare.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Divide.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Equal.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\GreaterThan.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\GreaterThanOrEqual.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\In.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\InstanceOf.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\LeftShift.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\LessThan.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\LessThanOrEqual.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\LogicalAnd.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\LogicalOr.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Multiply.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\NotEqual.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Remainder.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\RightShift.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Same.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\Subtraction.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Binary\UnsignedRightShift.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToChar.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToInt64.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToUInt16.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToFloat.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToBoolean.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToDouble.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToInt32.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToNumber.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToObject.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToPrimitive.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Convert\ToString.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Error.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\ICMethods.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Internals.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Stack.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Ternary\Conditional.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\BitwiseNot.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\Delete.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\LogicalNot.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\Negative.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\Positive.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\TypeOf.cs" />
+    <Compile Include="MCJavascriptRuntime\Operations\Unary\Void.cs" />
+    <Compile Include="MCJavascriptRuntime\Scope.cs" />
+    <Compile Include="MCJavascriptRuntime\Util\Conversions.cs" />
+    <Compile Include="MCJavascriptRuntime\Util\ImmutableStack.cs" />
+    <Compile Include="MCJavascriptRuntime\Util\ObjectPool.cs" />
+    <Compile Include="MCWebRuntime\AutoBindings.cs" />
+    <Compile Include="MCWebRuntime\AutoDOM.cs" />
+    <Compile Include="MCWebRuntime\AutoInternal.cs" />
+    <Compile Include="MCWebRuntime\AutoPrivate.cs" />
+    <Compile Include="MCWebRuntime\AutoAPI.cs" />
+    <Compile Include="MCWebRuntime\DOM\Geolocation.cs" />
+    <Compile Include="MCWebRuntime\DOM\HTMLBodyElement.cs" />
+    <Compile Include="MCWebRuntime\DOM\Navigator.cs" />
+    <Compile Include="MCWebRuntime\HTMLEngine.cs" />
+    <Compile Include="MCWebRuntime\JSPosition.cs" />
+    <Compile Include="MCWebRuntime\MDRExtensions.cs" />
+    <Compile Include="MCWebRuntime\PositionListeners.cs" />
+    <Compile Include="MCWebRuntime\WrappedObject.cs" />
+    <Compile Include="MCWebRuntime\IWrappedPrivateObject.cs" />
+    <Compile Include="MCWebRuntime\DOMBinder.cs" />
+    <Compile Include="MCWebRuntime\EventHandlerProperty.cs" />
+    <Compile Include="MCWebRuntime\EventListeners.cs" />
+    <Compile Include="MCWebRuntime\DOM\Console.cs" />
+    <Compile Include="MCWebRuntime\DOM\ContentWindow.cs" />
+    <Compile Include="MCWebRuntime\DOM\Document.cs" />
+    <Compile Include="MCWebRuntime\DOM\Element.cs" />
+    <Compile Include="MCWebRuntime\DOM\EventTarget.cs" />
+    <Compile Include="MCWebRuntime\HTMLRuntimeConfiguration.cs" />
+    <Compile Include="MCWebRuntime\JSEvent.cs" />
+    <Compile Include="MCWebRuntime\HTMLRuntime.cs" />
+    <Compile Include="MCWebRuntime\RecordReplayManager.cs" />
+    <Compile Include="MCWebRuntime\TimerQueue.cs" />
+    <Compile Include="MCJavascript\Program.cs" />
+    <Compile Include="MCJavascript\ProgramConfiguration.cs" />
+    <Compile Include="MCJavascript\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="MCJavascriptRuntime\IRClassDiagram.cd" />
+  </ItemGroup>
+  <Target Name="BeforeBuild" Condition=" ('$(OS)'=='Windows_NT') And ('$(Configuration)|$(Platform)' == 'Release|AnyCPU') ">
+    <Exec Command="..\BindingGenerator\BindingGenerator.cmd --AutoJSOperations" WorkingDirectory="BindingGenerator" />
+    <Exec Command="..\BindingGenerator\BindingGenerator.cmd" WorkingDirectory="BindingGenerator" />
+  </Target>
+</Project>

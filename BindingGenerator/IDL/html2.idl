@@ -1,0 +1,663 @@
+/*
+* Copyright (c) 2003 World Wide Web Consortium,
+* (Massachusetts Institute of Technology, Institut National de
+* Recherche en Informatique et en Automatique, Keio University). All
+* Rights Reserved. This program is distributed under the W3C's Software
+* Intellectual Property License. This program is distributed in the
+* hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+* the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+* PURPOSE.
+* See W3C License http://www.w3.org/Consortium/Legal/ for more details.
+*/
+
+// File: http://www.w3.org/TR/2003/REC-DOM-Level-2-HTML-20030109/html2.idl
+
+[List] interface HTMLCollection {
+  readonly attribute unsigned long   length;
+
+  Node                item(unsigned long index);
+  [Unimplemented] Node namedItem(DOMString name);
+};
+
+// Introduced in DOM Level 2:
+[List] interface HTMLOptionsCollection {
+  [Unimplemented]
+  attribute unsigned long   length;
+
+  [Unimplemented] Node               item(unsigned long index);
+  [Unimplemented] Node               namedItem(DOMString name);
+};
+
+interface HTMLDocument : Document {
+  [Unimplemented=Setting]
+                      attribute DOMString       title;
+   readonly attribute DOMString       referrer;
+   readonly attribute DOMString       domain;
+   readonly attribute DOMString       URL;
+            attribute HTMLElement     body;
+   readonly attribute HTMLCollection  images;
+   readonly attribute HTMLCollection  applets;
+   readonly attribute HTMLCollection  scripts;
+  [Unimplemented]
+             readonly attribute HTMLCollection  links;
+  [Unimplemented]
+             readonly attribute HTMLCollection  forms;
+  [Unimplemented]
+             readonly attribute HTMLCollection  anchors;
+  attribute DOMString       cookie;
+
+  void               open();
+  void               close();
+  void               write(DOMString text);
+  void               writeln(DOMString text);
+  NodeList           getElementsByName(DOMString elementName);
+};
+
+interface HTMLElement : Element {
+                         attribute DOMString       id;
+  [Unimplemented=Setting] attribute DOMString       title;
+  [Unimplemented=Setting] attribute DOMString       lang;
+  [Unimplemented]         attribute DOMString       dir;
+                         attribute DOMString       className;
+                         attribute DOMString       innerHTML;
+  [Unimplemented]         attribute long            tabIndex;
+
+  // event handler IDL attributes
+  // [TreatNonCallableasNull]
+  [EventHandler] attribute Function? onabort;
+  [EventHandler] attribute Function? onblur;
+  [EventHandler] attribute Function? oncanplay;
+  [EventHandler] attribute Function? oncanplaythrough;
+  [EventHandler] attribute Function? onchange;
+  [EventHandler] attribute Function? onclick;
+  [EventHandler] attribute Function? oncontextmenu;
+  [EventHandler] attribute Function? oncuechange;
+  [EventHandler] attribute Function? ondblclick;
+  [EventHandler] attribute Function? ondrag;
+  [EventHandler] attribute Function? ondragend;
+  [EventHandler] attribute Function? ondragenter;
+  [EventHandler] attribute Function? ondragleave;
+  [EventHandler] attribute Function? ondragover;
+  [EventHandler] attribute Function? ondragstart;
+  [EventHandler] attribute Function? ondrop;
+  [EventHandler] attribute Function? ondurationchange;
+  [EventHandler] attribute Function? onemptied;
+  [EventHandler] attribute Function? onended;
+  [EventHandler] attribute Function? onerror;
+  [EventHandler] attribute Function? onfocus;
+  [EventHandler] attribute Function? oninput;
+  [EventHandler] attribute Function? oninvalid;
+  [EventHandler] attribute Function? onkeydown;
+  [EventHandler] attribute Function? onkeypress;
+  [EventHandler] attribute Function? onkeyup;
+  [EventHandler] attribute Function? onload;
+  [EventHandler] attribute Function? onloadeddata;
+  [EventHandler] attribute Function? onloadedmetadata;
+  [EventHandler] attribute Function? onloadstart;
+  [EventHandler] attribute Function? onmousedown;
+  [EventHandler] attribute Function? onmousemove;
+  [EventHandler] attribute Function? onmouseout;
+  [EventHandler] attribute Function? onmouseover;
+  [EventHandler] attribute Function? onmouseup;
+  [EventHandler] attribute Function? onmousewheel;
+  [EventHandler] attribute Function? onpause;
+  [EventHandler] attribute Function? onplay;
+  [EventHandler] attribute Function? onplaying;
+  [EventHandler] attribute Function? onprogress;
+  [EventHandler] attribute Function? onratechange;
+  [EventHandler] attribute Function? onreset;
+  [EventHandler] attribute Function? onscroll;
+  [EventHandler] attribute Function? onseeked;
+  [EventHandler] attribute Function? onseeking;
+  [EventHandler] attribute Function? onselect;
+  [EventHandler] attribute Function? onshow;
+  [EventHandler] attribute Function? onstalled;
+  [EventHandler] attribute Function? onsubmit;
+  [EventHandler] attribute Function? onsuspend;
+  [EventHandler] attribute Function? ontimeupdate;
+  [EventHandler] attribute Function? onvolumechange;
+  [EventHandler] attribute Function? onwaiting;
+};
+
+interface HTMLHtmlElement : HTMLElement {
+  [Unimplemented] attribute DOMString       version;
+};
+
+interface HTMLHeadElement : HTMLElement {
+  [Unimplemented] attribute DOMString       profile;
+};
+
+interface HTMLLinkElement : HTMLElement {
+  [Unimplemented]           attribute boolean         disabled;
+  [Unimplemented=Retrieval] attribute DOMString       charset;
+  [Unimplemented]           attribute DOMString       href;
+  [Unimplemented]           attribute DOMString       hreflang;
+  [Unimplemented]           attribute DOMString       media;
+  [Unimplemented]           attribute DOMString       rel;
+  [Unimplemented]           attribute DOMString       rev;
+  [Unimplemented]           attribute DOMString       target;
+  [Unimplemented]           attribute DOMString       type;
+  //Added by Babak from the stylesheets.idl
+  [Unimplemented] readonly  attribute StyleSheet      sheet;
+};
+
+interface HTMLTitleElement : HTMLElement {
+  [Unimplemented=Setting]   attribute DOMString       text;
+};
+
+interface HTMLMetaElement : HTMLElement {
+                 attribute DOMString       content;
+  [Unimplemented] attribute DOMString       httpEquiv;
+                 attribute DOMString       name;
+  [Unimplemented] attribute DOMString       scheme;
+};
+
+interface HTMLBaseElement : HTMLElement {
+  [Unimplemented] attribute DOMString       href;
+  [Unimplemented] attribute DOMString       target;
+};
+
+interface HTMLIsIndexElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       prompt;
+};
+
+interface HTMLStyleElement : HTMLElement {
+  [Unimplemented]          attribute boolean         disabled;
+  [Unimplemented]          attribute DOMString       media;
+  [Unimplemented]          attribute DOMString       type;
+  //Added by Babak from the stylesheets.idl
+  [Unimplemented] readonly attribute StyleSheet      sheet;
+};
+
+interface HTMLBodyElement : HTMLElement {
+  [Unimplemented] attribute DOMString       aLink;
+  [Unimplemented] attribute DOMString       background;
+  [Unimplemented] attribute DOMString       bgColor;
+  [Unimplemented] attribute DOMString       link;
+  [Unimplemented] attribute DOMString       text;
+  [Unimplemented] attribute DOMString       vLink;
+};
+
+interface HTMLFormElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLCollection  elements;
+  [Unimplemented] readonly attribute long            length;
+  [Unimplemented] attribute DOMString       name;
+  [Unimplemented] attribute DOMString       acceptCharset;
+  [Unimplemented] attribute DOMString       action;
+  [Unimplemented] attribute DOMString       enctype;
+  [Unimplemented] attribute DOMString       method;
+  [Unimplemented] attribute DOMString       target;
+
+  [Unimplemented] void               submit();
+  [Unimplemented] void               reset();
+};
+
+interface HTMLSelectElement : HTMLElement {
+  [Unimplemented] readonly  attribute DOMString       type;
+  [Unimplemented]           attribute long            selectedIndex;
+  [Unimplemented]           attribute DOMString       value;
+  // Modified in DOM Level 2:
+  [Unimplemented] attribute unsigned long   length;
+  [Unimplemented] readonly  attribute HTMLFormElement form;
+  // Modified in DOM Level 2:
+  [Unimplemented] readonly  attribute HTMLOptionsCollection options;
+  [Unimplemented]           attribute boolean         disabled;
+  [Unimplemented]           attribute boolean         multiple;
+  [Unimplemented]           attribute DOMString       name;
+  [Unimplemented]           attribute long            size;
+
+  [Unimplemented]          void add(HTMLElement element, HTMLElement before);
+  [Unimplemented] void remove(long index);
+  [Unimplemented] void blur();
+  [Unimplemented] void focus();
+};
+
+interface HTMLOptGroupElement : HTMLElement {
+  [Unimplemented] attribute boolean         disabled;
+  [Unimplemented] attribute DOMString       label;
+};
+
+interface HTMLOptionElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  // Modified in DOM Level 2:
+  [Unimplemented]          attribute boolean         defaultSelected;
+  [Unimplemented] readonly attribute DOMString       text;
+  // Modified in DOM Level 2:
+  [Unimplemented] readonly attribute long            index;
+  [Unimplemented]          attribute boolean         disabled;
+  [Unimplemented]          attribute DOMString       label;
+                          attribute boolean         selected;
+  [Unimplemented]          attribute DOMString       value;
+};
+
+interface HTMLInputElement : HTMLElement {
+  [Unimplemented]          attribute DOMString       defaultValue;
+  [Unimplemented]          attribute boolean         defaultChecked;
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       accept;
+  [Unimplemented]          attribute DOMString       accessKey;
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       alt;
+                          attribute boolean         checked;
+  [Unimplemented]          attribute boolean         disabled;
+  [Unimplemented]          attribute long            maxLength;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented]          attribute boolean         readOnly;
+  // Modified in DOM Level 2:
+  [Unimplemented]          attribute unsigned long   size;
+  [Unimplemented]          attribute DOMString       src;
+  // Modified in DOM Level 2:
+  [Unimplemented]          attribute DOMString       type;
+  [Unimplemented]          attribute DOMString       useMap;
+                          attribute DOMString       value;
+
+  [Unimplemented] void               blur();
+  [Unimplemented] void               focus();
+  [Unimplemented] void               select();
+  [Unimplemented] void               click();
+};
+
+interface HTMLTextAreaElement : HTMLElement {
+  // Modified in DOM Level 2:
+  [Unimplemented]          attribute DOMString       defaultValue;
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       accessKey;
+  [Unimplemented]          attribute long            cols;
+  [Unimplemented]          attribute boolean         disabled;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented]          attribute boolean         readOnly;
+  [Unimplemented]          attribute long            rows;
+  [Unimplemented] readonly attribute DOMString       type;
+  [Unimplemented]          attribute DOMString       value;
+
+  [Unimplemented] void               blur();
+  [Unimplemented] void               focus();
+  [Unimplemented] void               select();
+};
+
+interface HTMLButtonElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       accessKey;
+  [Unimplemented]          attribute boolean         disabled;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented] readonly attribute DOMString       type;
+  [Unimplemented]          attribute DOMString       value;
+};
+
+interface HTMLLabelElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       accessKey;
+  [Unimplemented]          attribute DOMString       htmlFor;
+};
+
+interface HTMLFieldSetElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+};
+
+interface HTMLLegendElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       accessKey;
+  [Unimplemented]          attribute DOMString       align;
+};
+
+interface HTMLUListElement : HTMLElement {
+  [Unimplemented] attribute boolean         compact;
+  [Unimplemented] attribute DOMString       type;
+};
+
+interface HTMLOListElement : HTMLElement {
+  [Unimplemented] attribute boolean         compact;
+  [Unimplemented] attribute long            start;
+  [Unimplemented] attribute DOMString       type;
+};
+
+interface HTMLDListElement : HTMLElement {
+  [Unimplemented] attribute boolean         compact;
+};
+
+interface HTMLDirectoryElement : HTMLElement {
+  [Unimplemented] attribute boolean         compact;
+};
+
+interface HTMLMenuElement : HTMLElement {
+  [Unimplemented] attribute boolean         compact;
+};
+
+interface HTMLLIElement : HTMLElement {
+  [Unimplemented] attribute DOMString       type;
+  [Unimplemented] attribute long            value;
+};
+
+interface HTMLDDElement : HTMLElement {
+  [Unimplemented] attribute boolean         noWrap;
+};
+
+interface HTMLDTElement : HTMLElement {
+  [Unimplemented] attribute boolean         noWrap;
+};
+
+interface HTMLDivElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+};
+
+interface HTMLSpanElement : HTMLElement {};
+
+interface HTMLParagraphElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+};
+
+interface HTMLHeadingElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+};
+
+interface HTMLH1Element : HTMLElement {};
+interface HTMLH2Element : HTMLElement {};
+interface HTMLH3Element : HTMLElement {};
+interface HTMLH4Element : HTMLElement {};
+interface HTMLH5Element : HTMLElement {};
+interface HTMLH6Element : HTMLElement {};
+
+interface HTMLQuoteElement : HTMLElement {
+  [Unimplemented] attribute DOMString       cite;
+};
+
+interface HTMLBlockQuoteElement: HTMLQuoteElement {};
+
+interface HTMLPreElement : HTMLElement {
+  [Unimplemented] attribute long            width;
+};
+
+interface HTMLBRElement : HTMLElement {
+  [Unimplemented] attribute DOMString       clear;
+};
+
+interface HTMLBaseFontElement : HTMLElement {
+  [Unimplemented] attribute DOMString       color;
+  [Unimplemented] attribute DOMString       face;
+  // Modified in DOM Level 2:
+  [Unimplemented] attribute long            size;
+};
+
+interface HTMLFontElement : HTMLElement {
+  [Unimplemented] attribute DOMString       color;
+  [Unimplemented] attribute DOMString       face;
+  [Unimplemented] attribute DOMString       size;
+};
+
+interface HTMLHRElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+  [Unimplemented] attribute boolean         noShade;
+  [Unimplemented] attribute DOMString       size;
+  [Unimplemented] attribute DOMString       width;
+};
+
+interface HTMLModElement : HTMLElement {
+  [Unimplemented] attribute DOMString       cite;
+  [Unimplemented] attribute DOMString       dateTime;
+};
+
+interface HTMLAnchorElement : HTMLElement {
+  [Unimplemented] attribute DOMString       accessKey;
+  [Unimplemented] attribute DOMString       charset;
+  [Unimplemented] attribute DOMString       coords;
+                 attribute DOMString       href;
+  [Unimplemented] attribute DOMString       hreflang;
+  [Unimplemented] attribute DOMString       name;
+  [Unimplemented] attribute DOMString       rel;
+  [Unimplemented] attribute DOMString       rev;
+  [Unimplemented] attribute DOMString       shape;
+  [Unimplemented] attribute DOMString       target;
+  [Unimplemented] attribute DOMString       type;
+  [Unimplemented] void               blur();
+  [Unimplemented] void               focus();
+};
+
+interface HTMLImageElement : HTMLElement {
+  [Unimplemented]    attribute DOMString       name;
+  [Unimplemented]    attribute DOMString       align;
+  [Unimplemented]    attribute DOMString       alt;
+  [Unimplemented]    attribute DOMString       border;
+  // Modified in DOM Level 2:
+                    attribute long            height;
+  // Modified in DOM Level 2:
+  [Unimplemented]    attribute long            hspace;
+  [Unimplemented]    attribute boolean         isMap;
+  [Unimplemented]    attribute DOMString       longDesc;
+                    attribute DOMString       src;
+  [Unimplemented]    attribute DOMString       useMap;
+  // Modified in DOM Level 2:
+  [Unimplemented]    attribute long            vspace;
+  // Modified in DOM Level 2:
+                    attribute long            width;
+};
+
+interface HTMLObjectElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLFormElement form;
+  [Unimplemented]          attribute DOMString       code;
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       archive;
+  [Unimplemented]          attribute DOMString       border;
+  [Unimplemented]          attribute DOMString       codeBase;
+  [Unimplemented]          attribute DOMString       codeType;
+  [Unimplemented]          attribute DOMString       data;
+  [Unimplemented]          attribute boolean         declare;
+  [Unimplemented]          attribute DOMString       height;
+  [Unimplemented]          attribute long            hspace;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented]          attribute DOMString       standby;
+  [Unimplemented]          attribute DOMString       type;
+  [Unimplemented]          attribute DOMString       useMap;
+  [Unimplemented]          attribute long            vspace;
+  [Unimplemented]          attribute DOMString       width;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute Document        contentDocument;
+};
+
+interface HTMLParamElement : HTMLElement {
+  [Unimplemented] attribute DOMString       name;
+  [Unimplemented] attribute DOMString       type;
+  [Unimplemented] attribute DOMString       value;
+  [Unimplemented] attribute DOMString       valueType;
+};
+
+interface HTMLMapElement : HTMLElement {
+  [Unimplemented] readonly attribute HTMLCollection  areas;
+  [Unimplemented]          attribute DOMString       name;
+};
+
+interface HTMLAreaElement : HTMLElement {
+  [Unimplemented] attribute DOMString       accessKey;
+  [Unimplemented] attribute DOMString       alt;
+  [Unimplemented] attribute DOMString       coords;
+  [Unimplemented] attribute DOMString       href;
+  [Unimplemented] attribute boolean         noHref;
+  [Unimplemented] attribute DOMString       shape;
+  [Unimplemented] attribute DOMString       target;
+};
+
+interface HTMLScriptElement : HTMLElement {
+  [Unimplemented=Setting]   attribute DOMString       text;
+  [Unimplemented]           attribute DOMString       htmlFor;
+  [Unimplemented]           attribute DOMString       event;
+  [Unimplemented=Retrieval] attribute DOMString       charset;
+                           attribute boolean         defer;
+                           attribute DOMString       src;
+                           attribute DOMString       type;
+
+  /* The followings are added by Babak to support HTML5 */
+                           attribute boolean         async;
+};
+
+interface HTMLTableElement : HTMLElement {
+  // Modified in DOM Level 2:
+  [Unimplemented]
+  attribute HTMLTableCaptionElement caption;
+
+  // Modified in DOM Level 2:
+  [Unimplemented]
+  attribute HTMLTableSectionElement tHead;
+
+  // Modified in DOM Level 2:
+  [Unimplemented]
+  attribute HTMLTableSectionElement tFoot;
+
+  [Unimplemented] readonly attribute HTMLCollection  rows;
+  [Unimplemented] readonly attribute HTMLCollection  tBodies;
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       bgColor;
+  [Unimplemented]          attribute DOMString       border;
+  [Unimplemented]          attribute DOMString       cellPadding;
+  [Unimplemented]          attribute DOMString       cellSpacing;
+  [Unimplemented]          attribute DOMString       frame;
+  [Unimplemented]          attribute DOMString       rules;
+  [Unimplemented]          attribute DOMString       summary;
+  [Unimplemented]          attribute DOMString       width;
+  [Unimplemented] HTMLElement        createTHead();
+  [Unimplemented] void               deleteTHead();
+  [Unimplemented] HTMLElement        createTFoot();
+  [Unimplemented] void               deleteTFoot();
+  [Unimplemented] HTMLElement        createCaption();
+  [Unimplemented] void               deleteCaption();
+
+  // Modified in DOM Level 2:
+  [Unimplemented] HTMLElement        insertRow(long index);
+  [Unimplemented] void               deleteRow(long index);
+};
+
+interface HTMLTableCaptionElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+};
+
+interface HTMLTableColElement : HTMLElement {
+  [Unimplemented] attribute DOMString       align;
+  [Unimplemented] attribute DOMString       ch;
+  [Unimplemented] attribute DOMString       chOff;
+  [Unimplemented] attribute long            span;
+  [Unimplemented] attribute DOMString       vAlign;
+  [Unimplemented] attribute DOMString       width;
+};
+
+interface HTMLTableColGroupElement : HTMLElement {};
+
+interface HTMLTableSectionElement : HTMLElement {
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       ch;
+  [Unimplemented]          attribute DOMString       chOff;
+  [Unimplemented]          attribute DOMString       vAlign;
+  [Unimplemented] readonly attribute HTMLCollection  rows;
+
+  // Modified in DOM Level 2:
+  [Unimplemented] HTMLElement        insertRow(long index);
+  [Unimplemented] void               deleteRow(long index);
+};
+
+interface HTMLTableBodyElement : HTMLTableSectionElement {};
+interface HTMLTableFooterElement : HTMLTableSectionElement {};
+
+interface HTMLTableRowElement : HTMLElement {
+  // Modified in DOM Level 2:
+  [Unimplemented] readonly attribute long            rowIndex;
+  [Unimplemented] readonly attribute long            sectionRowIndex;
+  [Unimplemented] readonly attribute HTMLCollection  cells;
+
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       bgColor;
+  [Unimplemented]          attribute DOMString       ch;
+  [Unimplemented]          attribute DOMString       chOff;
+  [Unimplemented]          attribute DOMString       vAlign;
+
+  // Modified in DOM Level 2:
+  [Unimplemented] HTMLElement        insertCell(long index);
+  [Unimplemented] void               deleteCell(long index);
+};
+
+interface HTMLTableCellElement : HTMLElement {
+  [Unimplemented] readonly attribute long            cellIndex;
+  [Unimplemented]          attribute DOMString       abbr;
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       axis;
+  [Unimplemented]          attribute DOMString       bgColor;
+  [Unimplemented]          attribute DOMString       ch;
+  [Unimplemented]          attribute DOMString       chOff;
+  [Unimplemented]          attribute long            colSpan;
+  [Unimplemented]          attribute DOMString       headers;
+  [Unimplemented]          attribute DOMString       height;
+  [Unimplemented]          attribute boolean         noWrap;
+  [Unimplemented]          attribute long            rowSpan;
+  [Unimplemented]          attribute DOMString       scope;
+  [Unimplemented]          attribute DOMString       vAlign;
+  [Unimplemented]          attribute DOMString       width;
+};
+
+interface HTMLTableDataElement: HTMLTableCellElement {};
+interface HTMLTableHeaderElement : HTMLTableCellElement {};
+interface HTMLTableHeadElement : HTMLTableCellElement {};
+
+interface HTMLFrameSetElement : HTMLElement {
+  [Unimplemented] attribute DOMString       cols;
+  [Unimplemented] attribute DOMString       rows;
+};
+
+interface HTMLFrameElement : HTMLElement {
+  [Unimplemented]          attribute DOMString       frameBorder;
+  [Unimplemented]          attribute DOMString       longDesc;
+  [Unimplemented]          attribute DOMString       marginHeight;
+  [Unimplemented]          attribute DOMString       marginWidth;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented]          attribute boolean         noResize;
+  [Unimplemented]          attribute DOMString       scrolling;
+  [Unimplemented]          attribute DOMString       src;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute Document        contentDocument;
+};
+
+interface HTMLIFrameElement : HTMLElement {
+  [Unimplemented]          attribute DOMString       align;
+  [Unimplemented]          attribute DOMString       frameBorder;
+  [Unimplemented]          attribute DOMString       height;
+  [Unimplemented]          attribute DOMString       longDesc;
+  [Unimplemented]          attribute DOMString       marginHeight;
+  [Unimplemented]          attribute DOMString       marginWidth;
+  [Unimplemented]          attribute DOMString       name;
+  [Unimplemented]          attribute DOMString       scrolling;
+  [Unimplemented]          attribute DOMString       src;
+  [Unimplemented]          attribute DOMString       width;
+  // Introduced in DOM Level 2:
+  [Unimplemented] readonly attribute Document        contentDocument;
+};
+
+interface HTMLStrongElement : HTMLElement {};
+interface HTMLEmElement : HTMLElement {};
+interface HTMLBElement : HTMLElement {};
+interface HTMLIElement : HTMLElement {};
+interface HTMLUElement : HTMLElement {};
+interface HTMLSElement : HTMLElement {};
+interface HTMLCenterElement : HTMLElement {};
+interface HTMLCiteElement : HTMLElement {};
+interface HTMLUnknownElement : HTMLElement {};
+interface HTMLNoscriptElement : HTMLElement {};
+interface HTMLInsElement : HTMLModElement {};
+interface HTMLDelElement : HTMLModElement {};
+interface HTMLAbbrElement : HTMLElement {};
+interface HTMLAcronymElement : HTMLElement {};
+interface HTMLAddressElement : HTMLElement {};
+interface HTMLBDOElement : HTMLElement {};
+interface HTMLBigElement : HTMLElement {};
+interface HTMLCodeElement : HTMLElement {};
+interface HTMLDFNElement : HTMLElement {};
+interface HTMLKbdElement : HTMLElement {};
+interface HTMLNoframesElement : HTMLElement {};
+interface HTMLSampElement : HTMLElement {};
+interface HTMLSmallElement : HTMLElement {};
+interface HTMLSourceElement : HTMLElement {};
+interface HTMLStrikeElement : HTMLElement {};
+interface HTMLSubElement : HTMLElement {};
+interface HTMLSupElement : HTMLElement {};
+interface HTMLTTElement : HTMLElement {};
+interface HTMLVarElement : HTMLElement {};
+
+// TODO: These need the full definitions.
+interface HTMLMediaElement : HTMLElement {};
+interface HTMLAudioElement : HTMLMediaElement {};
+interface HTMLVideoElement : HTMLMediaElement {};

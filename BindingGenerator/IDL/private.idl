@@ -1,0 +1,17 @@
+[Private, Runtime] interface WrappedObject {
+  [Private, Unsafe] void gcDestroy();
+};
+
+[Private] interface EventFilter {
+};
+
+[Private] interface Page {
+  [Private, Unsafe, DisableHooks] void getNextEvent(EventFilter eventFilter, [ByRef] EventData eventData, DOMTimeStamp wakeupTime);
+  [Private, Unsafe] void cleanupAfterScript();
+  [Private, Unsafe] void startLocationTracking();
+  [Private, Unsafe] void stopLocationTracking();
+};
+
+[Private] interface UILocationWorkItem {
+  [Private, Unsafe, DisableHooks] void getPositionUpdate([ByRef] PositionData positionData);
+};

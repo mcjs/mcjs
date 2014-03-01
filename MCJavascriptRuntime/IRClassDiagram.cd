@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="mjr.IR.WritePropertyExpression" Collapsed="true">
+    <Position X="112.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\WritePropertyExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.WriteIndexerExpression" Collapsed="true">
+    <Position X="112.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAACA=</HashCode>
+      <FileName>IR\WriteIndexerExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.WriteIdentifierExpression" Collapsed="true">
+    <Position X="118.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAACA=</HashCode>
+      <FileName>IR\WriteIdentifierExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.WithStatement" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\WithStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.WhileStatement" Collapsed="true">
+    <Position X="31.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\WhileStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.VoidExpression" Collapsed="true">
+    <Position X="180.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\VoidExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.VariableDeclarationStatement" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\VariableDeclarationStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.VariableDeclaration" Collapsed="true">
+    <Position X="192" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACCA=</HashCode>
+      <FileName>IR\VariableDeclaration.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.UnsignedRightShiftExpression" Collapsed="true">
+    <Position X="90.25" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\UnsignedRightShiftExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.UnaryExpression" Collapsed="true">
+    <Position X="169.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\UnaryExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.TypeofExpression" Collapsed="true">
+    <Position X="187.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\TypeofExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.TryStatement" Collapsed="true">
+    <Position X="11.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAgAAAACA=</HashCode>
+      <FileName>IR\TryStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ToUInt32" Collapsed="true">
+    <Position X="155.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToUInt32.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToUInt16" Collapsed="true">
+    <Position X="157.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToUInt16.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToString" Collapsed="true">
+    <Position X="160" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToString.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToPrimitive" Collapsed="true">
+    <Position X="162.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToPrimitive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToObject" Collapsed="true">
+    <Position X="164.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToNumber" Collapsed="true">
+    <Position X="166.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToNumber.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToInteger" Collapsed="true">
+    <Position X="169" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToInteger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToInt32" Collapsed="true">
+    <Position X="171.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToInt32.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToFunction" Collapsed="true">
+    <Position X="173.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ToBoolean" Collapsed="true">
+    <Position X="175.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ToBoolean.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ThrowStatement" Collapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\ThrowStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ThisLiteral" Collapsed="true">
+    <Position X="126" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ThisLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.TernaryExpression" Collapsed="true">
+    <Position X="48" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAACACQAAAAACA=</HashCode>
+      <FileName>IR\TernaryExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.SwitchStatement" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\SwitchStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.SubtractionExpression" Collapsed="true">
+    <Position X="75.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\SubtractionExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.StringLiteral" Collapsed="true">
+    <Position X="135" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\StringLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.Statement" Collapsed="true">
+    <Position X="21" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\Statement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.SourceCodeDescriptor" Collapsed="true">
+    <Position X="201.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAgAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>IR\SourceCodeDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.SameExpression" Collapsed="true">
+    <Position X="93.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\SameExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.RightShiftExpression" Collapsed="true">
+    <Position X="100.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\RightShiftExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ReturnStatement" Collapsed="true">
+    <Position X="41.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\ReturnStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.RemainderExpression" Collapsed="true">
+    <Position X="53.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\RemainderExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.RegexpLiteral" Collapsed="true">
+    <Position X="128.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IR\RegexpLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.Reference" Collapsed="true">
+    <Position X="117.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ReadPropertyExpression" Collapsed="true">
+    <Position X="115.5" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ReadPropertyExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ReadIndexerExpression" Collapsed="true">
+    <Position X="115.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ReadIndexerExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ReadIdentifierExpression" Collapsed="true">
+    <Position X="121" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>IR\ReadIdentifierExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.PropertyAssignment" Collapsed="true">
+    <Position X="194.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEACAAAAQAAAAAAAAQAAAAAgAAACA=</HashCode>
+      <FileName>IR\PropertyAssignment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.PositiveExpression" Collapsed="true">
+    <Position X="182.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\PositiveExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ParenExpression" Collapsed="true">
+    <Position X="144" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\ParenExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ObjectLiteral" Collapsed="true">
+    <Position X="132.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>IR\ObjectLiteral.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.PrimitiveValueLiteral&lt;T&gt;" Collapsed="true">
+    <Position X="138.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>IR\PrimitiveValueLiteral.cs</FileName>
+      <NewMemberFileName>IR\NumericLiteral.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.NullLiteral" Collapsed="true">
+    <Position X="123.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\NullLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.NotSameExpression" Collapsed="true">
+    <Position X="55.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\NotSameExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.NotEqualExpression" Collapsed="true">
+    <Position X="65.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\NotEqualExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.NodeFactory" Collapsed="true">
+    <Position X="203.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kiaDEsCVzlismDCFFxlWwIpI7oKAnMn4eHgZBUgQMAI=</HashCode>
+      <FileName>IR\NodeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.Node" Collapsed="true">
+    <Position X="100" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEBAAAAAAAAAAAAAAAAAAAAEAAMAAIgAABAAAAAQCA=</HashCode>
+      <FileName>IR\Node.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.NewExpression" Collapsed="true">
+    <Position X="146.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\NewExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.NegativeExpression" Collapsed="true">
+    <Position X="185" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\NegativeExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.MultiplyExpression" Collapsed="true">
+    <Position X="95.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\MultiplyExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LoopStatement" Collapsed="true">
+    <Position X="33.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAABAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IR\LoopStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LogicalOrExpression" Collapsed="true">
+    <Position X="105.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LogicalOrExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LogicalNotExpression" Collapsed="true">
+    <Position X="150.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LogicalNotExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.LogicalAndExpression" Collapsed="true">
+    <Position X="58.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LogicalAndExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.Literal" Collapsed="true">
+    <Position X="132.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\Literal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LesserOrEqualExpression" Collapsed="true">
+    <Position X="70.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LesserOrEqualExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LesserExpression" Collapsed="true">
+    <Position X="78.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LesserExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LeftShiftExpression" Collapsed="true">
+    <Position X="83" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\LeftShiftExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.LabelStatement" Collapsed="true">
+    <Position X="25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IR\LabelStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.Invocation" Collapsed="true">
+    <Position X="147.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAIAAAAAAAAAIAAAAAAAACA=</HashCode>
+      <FileName>IR\Invocation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.IntLiteral" Collapsed="true">
+    <Position X="139.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\IntLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InternalNew" Collapsed="true">
+    <Position X="45.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\InternalNew.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InternalInvocation" Collapsed="true">
+    <Position X="44.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAACA=</HashCode>
+      <FileName>IR\InternalInvocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InternalExpression" Collapsed="true">
+    <Position X="44.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\InternalExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InternalCall" Collapsed="true">
+    <Position X="43.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\InternalCall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InstanceOfExpression" Collapsed="true">
+    <Position X="73.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\InstanceOfExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.INodeVisitor" Collapsed="true">
+    <Position X="201.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IR\INodeVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.InExpression" Collapsed="true">
+    <Position X="85.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\InExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.Indexer" Collapsed="true">
+    <Position X="114.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAACA=</HashCode>
+      <FileName>IR\Indexer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.IfStatement" Collapsed="true">
+    <Position X="27.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAACAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IR\IfStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.Identifier" Collapsed="true">
+    <Position X="120" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>IR\Identifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.GreaterOrEqualExpression" Collapsed="true">
+    <Position X="102.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\GreaterOrEqualExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.GreaterExpression" Collapsed="true">
+    <Position X="108" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\GreaterExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.GotoStatement" Collapsed="true">
+    <Position X="19.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\GotoStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.FunctionExpression" Collapsed="true">
+    <Position X="110.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAIAAAAAEAAA=</HashCode>
+      <FileName>IR\FunctionExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.FunctionDeclarationStatement" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\FunctionDeclarationStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ForStatement" Collapsed="true">
+    <Position X="29.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAACA=</HashCode>
+      <FileName>IR\ForStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ForEachInStatement" Collapsed="true">
+    <Position X="34" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAQAAAAQACAACA=</HashCode>
+      <FileName>IR\ForEachInStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.FinallyClause" Collapsed="true">
+    <Position X="199.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IR\FinallyClause.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.ExpressionStatement" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\ExpressionStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.Expression" Collapsed="true">
+    <Position X="115.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAEAA=</HashCode>
+      <FileName>IR\Expression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.EqualExpression" Collapsed="true">
+    <Position X="98" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\EqualExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.EmptyStatement" Collapsed="true">
+    <Position X="39" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\EmptyStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.DoWhileStatement" Collapsed="true">
+    <Position X="36.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\DoWhileStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.DoubleLiteral" Collapsed="true">
+    <Position X="137.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\DoubleLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.DivideExpression" Collapsed="true">
+    <Position X="60.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\DivideExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.DeleteExpression" Collapsed="true">
+    <Position X="153.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\DeleteExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ConversionExpression" Collapsed="true">
+    <Position X="165.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ConversionExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ContinueStatement" Collapsed="true">
+    <Position X="18" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\ContinueStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.CommaOperatorExpression" Collapsed="true">
+    <Position X="50.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACA=</HashCode>
+      <FileName>IR\CommaOperatorExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.CatchClause" Collapsed="true">
+    <Position X="197" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAQAAAACA=</HashCode>
+      <FileName>IR\CatchClause.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.CaseClause" Collapsed="true">
+    <Position X="189.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAAAAAAgAAAAABAAAAAAAAAAAQAAAAAAAAACA=</HashCode>
+      <FileName>IR\CaseClause.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.CallExpression" Collapsed="true">
+    <Position X="148.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAACA=</HashCode>
+      <FileName>IR\CallExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BreakStatement" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BreakStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BooleanLiteral" Collapsed="true">
+    <Position X="141.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BooleanLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.BlockStatement" Collapsed="true">
+    <Position X="22.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BlockStatement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BitwiseXorExpression" Collapsed="true">
+    <Position X="63" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BitwiseXorExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BitwiseOrExpression" Collapsed="true">
+    <Position X="68" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BitwiseOrExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BitwiseNotExpression" Collapsed="true">
+    <Position X="178" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BitwiseNotExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.BitwiseAndExpression" Collapsed="true">
+    <Position X="80.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\BitwiseAndExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.BinaryExpression" Collapsed="true">
+    <Position X="80.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAACACAAAAAACA=</HashCode>
+      <FileName>IR\BinaryExpression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mjr.IR.ArrayLiteral" Collapsed="true">
+    <Position X="130.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IR\ArrayLiteral.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.AdditionExpression" Collapsed="true">
+    <Position X="87.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\AdditionExpression.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mjr.IR.PrimitiveLiteral" Collapsed="true">
+    <Position X="138.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IR\PrimitiveLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="mjr.IR.NodeType" Collapsed="true">
+    <Position X="201.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IUCBIABAAACBRSAICQAACAYGQEgJkCAAAABUAAEAAJA=</HashCode>
+      <FileName>IR\NodeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

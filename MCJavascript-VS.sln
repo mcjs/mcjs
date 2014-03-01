@@ -1,0 +1,102 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCJavascript", "MCJavascript-VS.csproj", "{B90B678B-89A0-4BFE-B655-73633BB6301E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A26A366-9B77-4BE3-BAFA-14B6E6F1908C}.Release|x86.ActiveCfg = Release|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{511851CB-9FA4-427F-819C-D80D5380F564}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AB0BC702-6F9D-49CC-AD76-F2EF2C240E2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Debug|x86.Build.0 = Debug|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|x86.ActiveCfg = Release|Any CPU
+		{B90B678B-89A0-4BFE-B655-73633BB6301E}.Release|x86.Build.0 = Release|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C7860192-A3FF-4470-A361-942D6D6D397D}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		$0.CSharpFormattingPolicy = $2
+		$0.TextStylePolicy = $6
+		$0.XmlFormattingPolicy = $7
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$2.BeforeConstructorDeclarationParentheses = False
+		$2.BeforeDelegateDeclarationParentheses = False
+		$2.BeforeMethodCallParentheses = False
+		$2.BeforeMethodDeclarationParentheses = False
+		$2.NewParentheses = False
+		$2.inheritsScope = text/x-csharp
+		$2.inheritsSet = Mono
+		$2.scope = text/x-csharp
+		$3.FileWidth = 120
+		$3.RemoveTrailingWhitespace = True
+		$3.inheritsScope = text/plain
+		$3.inheritsSet = VisualStudio
+		$3.scope = text/plain
+		$4.inheritsSet = null
+		$4.scope = application/config+xml
+		$5.inheritsSet = null
+		$5.scope = application/config+xml
+		$6.inheritsSet = null
+		$6.scope = application/xml
+		$7.inheritsScope = application/xml
+		$7.inheritsSet = Mono
+		$7.scope = application/xml
+		Policies = $0
+		StartupItem = MCJavascript-VS.csproj
+	EndGlobalSection
+EndGlobal
