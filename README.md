@@ -48,11 +48,11 @@ make
 
 or
 
-make JS_BIILD_TYPE=Release
+make JS_BUILD_TYPE=Release
 
 The following command builds ./MCJavascript/bin/Debug/MCJavascript.exe:
 
-make JS_BIILD_TYPE=Debug
+make JS_BUILD_TYPE=Debug
 
 -- Windows Builds:
 
