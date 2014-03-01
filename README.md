@@ -58,5 +58,7 @@ make JS BIILD TYPE=Debug
 
 You can use Visual Studio or Xamarin Studio to open and build MCJavascript.
 In the root MCJavascript directory open MCJavascript-VS.sln solution and build.
+NOTE: If building for the first time, please first build in RELASE mode once and 
+      then you can build in DEBUG mode.
 
 For more documentation, please refer to docs/MCJS.pdf in the repo
